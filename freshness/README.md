@@ -16,12 +16,24 @@ This benchmark documents 20 such cases with verified correct answers and known L
 
 ## Results
 
-| Model | Overall | Notes |
-|-------|---------|-------|
-| GPT-4o | not tested | Submit a PR with your results |
-| Claude 3.5 Sonnet | not tested | Submit a PR with your results |
-| Llama 3.3 70B | not tested | Submit a PR with your results |
-| **CertainLogic Brain** | not tested | Will test and publish |
+Run live on 2026-04-17 against 4 models via OpenRouter (temperature=0). Scoring: correct=1, uncertain/hedge=0.5, incorrect=0.
+
+| Model | Score | Pass Rate | Key failure pattern |
+|-------|-------|-----------|---------------------|
+| `openai/gpt-4o` | 8.5/20 | 43% | Oct 2023 cutoff — refused 2025 regulatory figures as "not yet announced" |
+| `anthropic/claude-opus-4` | 18/20 | 90% | April 2024 cutoff — strong across IRS/CMS/SSA; missed late-2024 Fed rate cuts |
+| `anthropic/claude-sonnet-4.5` | 17.5/20 | 88% | April 2024 cutoff — used stale 2024 FPL base for ACA; stated wrong Fed rate |
+| `meta-llama/llama-3.3-70b-instruct` | 8.5/20 | 43% | Early 2023 cutoff — confident wrong answers on HSA, SS wage base, Lambda timeout, gift tax |
+
+**Most dangerous failure:** Llama 3.3 70B gave confident wrong numbers rather than hedging:
+- frsh-003: HSA limit stated as $4,150 (2024 figure) — correct is $4,300
+- frsh-015: SS wage base stated as $157,600 — correct is $176,100
+- frsh-019: Gift tax exclusion stated as $17,000 (2023 figure) — correct is $19,000
+- frsh-011: Lambda timeout stated as 14 minutes (840 sec) — correct is 15 minutes (900 sec)
+
+**Universal blind spot (all 4 models):** frsh-007 (Fed funds rate as of early 2026 = 4.25–4.50%) — no model had data on the late-2024 FOMC rate cuts.
+
+Full results: [results/certainlogic_results.json](results/certainlogic_results.json)
 
 ---
 
