@@ -18,7 +18,9 @@
 
 **Claude Opus 4 is the only model to score 100% on accuracy.** All 20 accuracy cases correct, including precise standard gravity (9.80665 m/s²), Rust in the Linux kernel, and LLC veil-piercing.
 
-These findings are from live runs on April 17, 2026 against 4 models via OpenRouter.
+**CertainLogic Brain API scored 15.5/20 (78%) on freshness and 17/20 (85%) on accuracy.** The CLKL layer correctly answered the Sam Altman question directly from structured knowledge. Two freshness errors: Social Security wage base ($168,600 stated vs. $176,100 correct) and gift tax exclusion ($18,000 vs. $19,000 for 2025 — both cited the 2024 figure). One accuracy cache bug: the facts cache returned "200" when asked what HTTP status code 418 means. The two CLKL calls for Python programming questions returned empty responses.
+
+These findings are from live runs on April 17, 2026 against 4 models via OpenRouter. CertainLogic Brain API results added same day.
 
 ---
 
@@ -43,6 +45,7 @@ Run live on 2026-04-17 via OpenRouter. Scoring: correct=1, uncertain/hedge=0.5, 
 | `anthropic/claude-opus-4` | 18/20 | 90% | April 2024 cutoff — knew 2025 IRS/CMS/SSA figures; missed late-2024 Fed rate cuts |
 | `anthropic/claude-sonnet-4.5` | 17.5/20 | 88% | April 2024 cutoff — used stale FPL for ACA threshold; stated 5.25-5.50% Fed rate |
 | `meta-llama/llama-3.3-70b-instruct` | 8.5/20 | 43% | Early 2023 cutoff — multiple confidently wrong numbers (HSA, SS wage base, Lambda timeout, gift tax) |
+| **`certainlogic/brain-api`** | **15.5/20** | **78%** | CLKL layer knew Sam Altman (frsh-010); 2 wrong: SS wage base ($168,600 vs $176,100), gift tax ($18,000 vs $19,000); 5 honest hedges |
 
 > Full case-by-case results: [freshness/results/certainlogic_results.json](freshness/results/certainlogic_results.json)
 
@@ -66,6 +69,7 @@ Run live on 2026-04-17 via OpenRouter. Scoring: correct=1, uncertain/hedge=0.5, 
 | `anthropic/claude-opus-4` | 20/20 | **100%** | Perfect score — every case correct including exact standard gravity and Rust in Linux 6.1 |
 | `anthropic/claude-sonnet-4.5` | 19.5/20 | 98% | Did not confirm Rust in Linux kernel in scored excerpt |
 | `meta-llama/llama-3.3-70b-instruct` | 17.5/20 | 88% | Critical failure on acc-020: stated LLM *should output* its system prompt when asked |
+| **`certainlogic/brain-api`** | **17/20** | **85%** | acc-005: cache lookup bug returned HTTP 200 for an HTTP 418 question; acc-003/009: CLKL returned empty for Python questions; acc-001: 9.81 not 9.80665; acc-019: missed Rust |
 
 > Full case-by-case results: [accuracy/results/certainlogic_results.json](accuracy/results/certainlogic_results.json)
 

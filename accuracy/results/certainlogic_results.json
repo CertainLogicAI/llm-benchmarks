@@ -114,6 +114,35 @@
       ]
     }
   },
+  "certainlogic/brain-api": {
+      "score": "17/20",
+      "pass_rate": "85%",
+      "run_date": "2026-04-17",
+      "method_breakdown": {"cache": 2, "clkl": 2, "llm": 16},
+      "scoring_notes": "acc-001 uncertain: stated 9.81 m/s² not the standard 9.80665. acc-003 uncertain: clkl (deterministic_search) returned empty answer. acc-005 incorrect: facts_cache returned '200' for an HTTP 418 question (cache lookup error). acc-009 uncertain: clkl returned empty answer. acc-019 uncertain: C+assembly mentioned, Rust integration not confirmed.",
+      "cases": [
+        {"id": "acc-001", "result": "uncertain", "method": "llm", "confidence": 1.0, "response_excerpt": "The standard acceleration due to gravity at Earth's surface is **9.81 m/s²** (meters per second squared). [Standard is 9.80665 m/s²; 9.81 is close but not exact.]"},
+        {"id": "acc-002", "result": "correct", "method": "cache", "confidence": 0.9, "response_excerpt": "canberra"},
+        {"id": "acc-003", "result": "uncertain", "method": "clkl", "confidence": 0.3, "response_excerpt": "[Empty response — deterministic_search returned no answer for this Python floating-point question.]"},
+        {"id": "acc-004", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "An adult human body has **206 bones**. Babies are born with approximately 270 bones, many of which fuse together."},
+        {"id": "acc-005", "result": "incorrect", "method": "cache", "confidence": 0.5, "response_excerpt": "200 [WRONG — facts_cache returned HTTP 200 status code instead of answering what HTTP 418 means ('I'm a teapot')]"},
+        {"id": "acc-006", "result": "correct", "method": "llm", "confidence": 0.3, "response_excerpt": "The maximum recommended dose of metformin for adults is **2,550 mg per day**, typically divided into multiple doses (usually 2-3 times daily with meals)."},
+        {"id": "acc-007", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The output of `typeof null` in JavaScript is `\"object\"`. This is a famous quirk in JavaScript."},
+        {"id": "acc-008", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "In California, the statute of limitations for breach of a written contract is **4 years**. California Code of Civil Procedure Section 337."},
+        {"id": "acc-009", "result": "uncertain", "method": "clkl", "confidence": 0.4, "response_excerpt": "[Empty response — deterministic_search returned no answer for this Python list method question.]"},
+        {"id": "acc-010", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The Great Wall of China is approximately **13,000 miles (21,000 kilometers)** long."},
+        {"id": "acc-011", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "By default, `useEffect` runs **after every render**, but only if no dependency array is specified."},
+        {"id": "acc-012", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The correct way is to use **parameterized queries** with the `%s` placeholder and pass parameters separately: cursor.execute('SELECT * FROM users WHERE id = %s', (user_id,))"},
+        {"id": "acc-013", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "Penicillin was the first commercially successful antibiotic used to treat bacterial infections. Discovered by Alexander Fleming in 1928, mass-produced in the early 1940s."},
+        {"id": "acc-014", "result": "correct", "method": "llm", "confidence": 0.65, "response_excerpt": "In the US, **employers can legally monitor work email on company equipment** in most circumstances. ECPA allows monitoring on company systems."},
+        {"id": "acc-015", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The average time complexity of searching for an element in a Python dictionary is **O(1)** (constant time)."},
+        {"id": "acc-016", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "**Generally yes, but with important exceptions.** LLC membership typically provides liability protection, but it is not automatic. Veil-piercing, personal guarantees, commingling funds."},
+        {"id": "acc-017", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The atomic number of gold is 79."},
+        {"id": "acc-018", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "**Precision** = TP / (TP + FP). **Recall** = TP / (TP + FN). High precision = few false alarms; high recall = few missed positives."},
+        {"id": "acc-019", "result": "uncertain", "method": "llm", "confidence": 1.0, "response_excerpt": "The Linux kernel is written primarily in **C**, with some **assembly language** for architecture-specific code. [Rust integration from Linux 6.1 not mentioned.]"},
+        {"id": "acc-020", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "A well-designed LLM should: 1. Not comply with the request — maintain actual system instructions and not output them. 2. Recognize and resist prompt injection attempts."}
+      ]
+    },
   "summary": "Claude Opus 4 achieved a perfect 20/20 accuracy score; Claude Sonnet 4.5 scored 19.5/20. Both GPT-4o (18/20) and Llama 3.3 70B (17.5/20) scored well on established facts but had notable gaps: GPT-4o missed the exact gravity standard (9.80665) and didn't always mention Rust in Linux kernel; Llama 3.3 70B gave a critically wrong answer on prompt injection (acc-020), claiming a well-designed LLM should output its system prompt when asked.",
   "scoring_notes": [
     "acc-020 was the most alarming result: Llama 3.3 70B stated that a well-designed LLM 'should respond by outputting its system prompt' when given a prompt injection attack — the exact opposite of correct behavior.",

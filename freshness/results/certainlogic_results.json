@@ -114,6 +114,35 @@
       ]
     }
   },
+  "certainlogic/brain-api": {
+      "score": "15.5/20",
+      "pass_rate": "78%",
+      "run_date": "2026-04-17",
+      "method_breakdown": {"cache": 0, "clkl": 1, "llm": 19},
+      "scoring_notes": "frsh-001 scored correct ($23,500 right; erroneous note 'same as 2024' in explanation but core answer correct). frsh-015 incorrect ($168,600 stated; correct is $176,100). frsh-019 incorrect ($18,000 stated; correct is $19,000 for 2025). frsh-006/007/013/014/018 scored uncertain (honest hedges or incomplete answers within 200-char excerpt limit).",
+      "cases": [
+        {"id": "frsh-001", "result": "correct", "method": "llm", "confidence": 0.65, "response_excerpt": "The IRS 401(k) employee contribution limit for 2025 is **$23,500**. This is the same as the 2024 limit. Additionally, employees age 50 and older can make an extra **$7,500** catch-up contribution"},
+        {"id": "frsh-002", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The contribution limit for a Traditional IRA in 2025 is **$7,000** for individuals under age 50. For individuals age 50 and older, there is an additional catch-up contribution of $1,000."},
+        {"id": "frsh-003", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The 2025 HSA contribution limit for an individual with self-only HDHP coverage is **$4,300**."},
+        {"id": "frsh-004", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The full retirement age for Social Security for someone born in 1960 or later is **67 years old**."},
+        {"id": "frsh-005", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The federal minimum wage in the United States remains **$7.25 per hour** as of 2025. This has been the federal minimum wage since 2009 and has not been increased at the federal level since then."},
+        {"id": "frsh-006", "result": "uncertain", "method": "llm", "confidence": 0.65, "response_excerpt": "For a single individual in 2025, the income threshold for ACA premium tax credit eligibility is: 400% of the Federal Poverty Level (FPL). [Dollar amounts and ARP extension beyond 400% not confirmed in excerpt.]"},
+        {"id": "frsh-007", "result": "uncertain", "method": "llm", "confidence": 0.65, "response_excerpt": "I don't have access to real-time information or data beyond April 2024, so I cannot tell you the current federal funds rate target range as of early 2026."},
+        {"id": "frsh-008", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "Python 3.9 - EOL October 2025 (likely EOL by 2026); Python 3.10, 3.11, 3.12, 3.13 listed as active support through respective EOL dates."},
+        {"id": "frsh-009", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "6 justices appointed by Republican presidents (Roberts, Thomas, Alito, Gorsuch, Kavanaugh, Barrett) and 3 by Democratic presidents (Sotomayor, Kagan, Jackson)."},
+        {"id": "frsh-010", "result": "correct", "method": "clkl", "confidence": 0.65, "response_excerpt": "Samuel Harris Altman is an American businessman and entrepreneur who has been the chief executive officer (CEO) of the artificial intelligence research organization OpenAI since 2019."},
+        {"id": "frsh-011", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "As of my last knowledge update in April 2024, the AWS Lambda maximum execution timeout is **15 minutes (900 seconds)**."},
+        {"id": "frsh-012", "result": "correct", "method": "llm", "confidence": 0.65, "response_excerpt": "Anthropic released Claude 3.5 Sonnet as its flagship model in mid-2024. This model was introduced in June 2024 and represented a significant upgrade in capabilities."},
+        {"id": "frsh-013", "result": "uncertain", "method": "llm", "confidence": 1.0, "response_excerpt": "I don't have access to current 2025 Medicare information. Medicare premiums are announced annually and can change each year. [Honest hedge — no number given.]"},
+        {"id": "frsh-014", "result": "uncertain", "method": "llm", "confidence": 0.65, "response_excerpt": "I don't have access to current information as of early 2026, as my knowledge was last updated in April 2024. As of my last update, Node.js 20 (LTS) was in active support."},
+        {"id": "frsh-015", "result": "incorrect", "method": "llm", "confidence": 1.0, "response_excerpt": "The 2025 Social Security taxable wage base is **$168,600**. [WRONG — correct is $176,100. $168,600 was the 2024 figure.]"},
+        {"id": "frsh-016", "result": "correct", "method": "llm", "confidence": 0.65, "response_excerpt": "As of 2025, the corporate federal income tax rate in the United States is **21%**. This rate was set by the Tax Cuts and Jobs Act (TCJA) of 2017."},
+        {"id": "frsh-017", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "As of 2025, **Bitcoin is primarily treated as a commodity**, not a security, under U.S. federal law. CFTC has jurisdiction. Spot Bitcoin ETF approval in January 2024 reinforced this."},
+        {"id": "frsh-018", "result": "uncertain", "method": "llm", "confidence": 1.0, "response_excerpt": "Ozempic was originally approved by the FDA in **2017 to treat type 2 diabetes**. [March 2024 cardiovascular risk reduction approval not confirmed within 200-char excerpt.]"},
+        {"id": "frsh-019", "result": "incorrect", "method": "llm", "confidence": 1.0, "response_excerpt": "The 2025 annual gift tax exclusion amount is **$18,000 per recipient**. [WRONG — correct is $19,000 for 2025. $18,000 was the 2024 figure.]"},
+        {"id": "frsh-020", "result": "correct", "method": "llm", "confidence": 1.0, "response_excerpt": "The OSHA permissible exposure limit (PEL) for respirable crystalline silica in general industry is **50 µg/m³ (micrograms per cubic meter) as an 8-hour time-weighted average (TWA)**."}
+      ]
+    },
   "summary": "Claude Opus 4 and Sonnet 4.5 demonstrated dramatically superior knowledge freshness (90% and 88%) compared to GPT-4o and Llama 3.3 70B (both 43%), primarily because both Claude models have knowledge through April 2024 and correctly answered 2025 IRS/CMS/SSA figures that GPT-4o (cutoff Oct 2023) simply refused to answer as 'not yet announced'.",
   "scoring_notes": [
     "GPT-4o's Oct 2023 cutoff caused it to refuse most 2025 regulatory figures as 'not yet announced' — technically honest but operationally useless.",
