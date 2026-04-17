@@ -1,0 +1,102 @@
+[
+  {
+    "id": "gen-001",
+    "category": "general",
+    "question": "In what year did the Berlin Wall fall?",
+    "correct_answer": "1989. The Berlin Wall fell on November 9, 1989. Germany was officially reunified on October 3, 1990.",
+    "common_hallucination": "LLMs occasionally confuse the wall's fall (1989) with German reunification (1990), or state 1991 (USSR dissolution). The date itself is usually correct but context errors are common.",
+    "ground_truth_source": "Historical consensus; Bundesarchiv; German Federal Government records",
+    "severity": "low",
+    "tags": ["history", "Germany", "Cold-War", "dates"]
+  },
+  {
+    "id": "gen-002",
+    "category": "general",
+    "question": "What is the current population of Australia?",
+    "correct_answer": "Approximately 26–27 million as of 2024. Australia's population reached 26 million in 2022 and continues to grow at roughly 1.5–2% annually.",
+    "common_hallucination": "LLMs frequently cite populations from their training data that are 2–5 years stale, often stating 25 million or even 24 million, reflecting older census or estimate data",
+    "ground_truth_source": "Australian Bureau of Statistics (ABS) population clock; ABS National, state and territory population reports",
+    "severity": "low",
+    "tags": ["geography", "population", "Australia", "demographics"]
+  },
+  {
+    "id": "gen-003",
+    "category": "general",
+    "question": "What is the speed of light in a vacuum to 4 significant figures?",
+    "correct_answer": "299,792,458 meters per second (exact, by definition since 1983). To 4 significant figures: 2.998 × 10^8 m/s. Often approximated as 3.00 × 10^8 m/s.",
+    "common_hallucination": "LLMs frequently round to 3 × 10^8 m/s without noting it's an approximation, or state '186,000 miles per second' (actually 186,282 mi/s). Some give fewer significant figures than requested.",
+    "ground_truth_source": "NIST CODATA; SI definition (17th CGPM, 1983); BIPM",
+    "severity": "low",
+    "tags": ["physics", "constants", "speed-of-light", "significant-figures"]
+  },
+  {
+    "id": "gen-004",
+    "category": "general",
+    "question": "When did Microsoft acquire LinkedIn, and for how much?",
+    "correct_answer": "Microsoft acquired LinkedIn in December 2016 for approximately $26.2 billion — the largest acquisition in Microsoft's history at that time.",
+    "common_hallucination": "LLMs often state the deal closed in 2016 but cite incorrect prices ($19 billion, $20 billion) or confuse it with other acquisitions. Some state 2015 as the announcement year.",
+    "ground_truth_source": "Microsoft press release (June 13, 2016); SEC filings; LinkedIn blog",
+    "severity": "low",
+    "tags": ["Microsoft", "LinkedIn", "acquisition", "corporate", "tech-history"]
+  },
+  {
+    "id": "gen-005",
+    "category": "general",
+    "question": "What is the capital of Australia?",
+    "correct_answer": "Canberra. Despite common misconceptions, Australia's capital is not Sydney or Melbourne. Canberra was purpose-built as a compromise between the two rival cities and became the capital in 1913.",
+    "common_hallucination": "This is one of the most commonly hallucinated geographic facts — LLMs frequently state Sydney is the capital of Australia. This is wrong. Sydney is the largest city but Canberra is the capital.",
+    "ground_truth_source": "Australian Government; Australian Constitution; Parliament of Australia",
+    "severity": "medium",
+    "tags": ["geography", "capitals", "Australia", "Canberra"]
+  },
+  {
+    "id": "gen-006",
+    "category": "general",
+    "question": "Who holds the NBA all-time scoring record as of 2024, and what is the record?",
+    "correct_answer": "LeBron James surpassed Kareem Abdul-Jabbar's record of 38,387 points on February 7, 2023. As of the 2023–24 season, LeBron James holds the all-time NBA scoring record with over 40,000 points.",
+    "common_hallucination": "LLMs trained before early 2023 frequently state Kareem Abdul-Jabbar holds the record. Even models trained after may cite the record at the moment of the milestone rather than the updated total.",
+    "ground_truth_source": "NBA official statistics; Basketball-Reference.com",
+    "severity": "low",
+    "tags": ["NBA", "sports", "records", "LeBron", "scoring"]
+  },
+  {
+    "id": "gen-007",
+    "category": "general",
+    "question": "What is the Avogadro constant to 4 significant figures?",
+    "correct_answer": "6.022 × 10^23 mol⁻¹ (more precisely: 6.02214076 × 10^23 mol⁻¹, exact by SI definition since 2019)",
+    "common_hallucination": "LLMs often state '6.023 × 10^23' (incorrect rounding) or '6.02 × 10^23' (only 3 sig figs when 4 are requested). The 2019 SI redefinition made this exact; LLMs sometimes present it as a measured approximation.",
+    "ground_truth_source": "NIST CODATA 2018; SI redefinition (26th CGPM, 2018, effective 2019)",
+    "severity": "low",
+    "tags": ["chemistry", "constants", "Avogadro", "significant-figures", "SI"]
+  },
+  {
+    "id": "gen-008",
+    "category": "general",
+    "question": "In what year was the company Airbnb founded?",
+    "correct_answer": "2008. Airbnb was founded in August 2008 by Brian Chesky, Joe Gebbia, and Nathan Blecharczyk in San Francisco, originally as 'AirBed & Breakfast'.",
+    "common_hallucination": "LLMs frequently state 2009 or 2010, conflating the founding year with Airbnb's Y Combinator participation (Winter 2009) or its period of significant growth",
+    "ground_truth_source": "Airbnb official company history; SEC S-1 filing (2020); Y Combinator records",
+    "severity": "low",
+    "tags": ["Airbnb", "founding", "startup", "tech-history", "corporate"]
+  },
+  {
+    "id": "gen-009",
+    "category": "general",
+    "question": "What is the tallest mountain in Africa?",
+    "correct_answer": "Mount Kilimanjaro in Tanzania, at 5,895 meters (19,341 feet) above sea level.",
+    "common_hallucination": "This is generally answered correctly, but LLMs sometimes confuse the elevation (citing 5,891m or other rounded figures) or misidentify the country as Kenya (Kilimanjaro is in Tanzania, near the Kenyan border)",
+    "ground_truth_source": "USGS; National Geographic; Tanzania National Parks",
+    "severity": "low",
+    "tags": ["geography", "Africa", "mountains", "Kilimanjaro"]
+  },
+  {
+    "id": "gen-010",
+    "category": "general",
+    "question": "What year did the first iPhone launch, and who announced it?",
+    "correct_answer": "Steve Jobs announced the first iPhone on January 9, 2007 at the Macworld Conference & Expo. It went on sale on June 29, 2007.",
+    "common_hallucination": "LLMs correctly identify Jobs and 2007, but frequently conflate the announcement date (January 2007) with the release date (June 2007), or cite Macworld as 'CES' or 'Apple's annual developer conference'",
+    "ground_truth_source": "Apple press release (January 9, 2007); Macworld Conference & Expo keynote records",
+    "severity": "low",
+    "tags": ["Apple", "iPhone", "Steve-Jobs", "tech-history", "product-launch"]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "tech-001",
+    "category": "technical",
+    "question": "What is the end-of-life (EOL) date for Python 3.9?",
+    "correct_answer": "Python 3.9 reached end-of-life on October 5, 2025. It will no longer receive security updates after that date.",
+    "common_hallucination": "LLMs frequently cite 2023 or 2024 as the EOL date, or confuse Python 3.9 EOL with Python 3.8 EOL (October 2024). Some state Python 3.9 is 'still supported' without qualification.",
+    "ground_truth_source": "Python.org/downloads; PEP 596; Python Developer's Guide release cycle",
+    "severity": "medium",
+    "tags": ["Python", "EOL", "deprecation", "version", "security"]
+  },
+  {
+    "id": "tech-002",
+    "category": "technical",
+    "question": "What is the default rate limit for the OpenAI GPT-4o API for Tier 1 users?",
+    "correct_answer": "As of 2024, Tier 1 limits for GPT-4o are 500 RPM (requests per minute) and 30,000 TPM (tokens per minute). These limits change as OpenAI updates their tier system and should always be verified at platform.openai.com/docs/guides/rate-limits.",
+    "common_hallucination": "LLMs cite stale rate limits from prior model releases or prior tier structures. GPT-4 and GPT-4o have different limits, and limits vary by tier (1–5). LLMs often give a confident specific number that is outdated.",
+    "ground_truth_source": "OpenAI Rate Limits documentation (platform.openai.com/docs/guides/rate-limits) — verify current values as these change frequently",
+    "severity": "medium",
+    "tags": ["OpenAI", "rate-limits", "API", "GPT-4o", "tier"]
+  },
+  {
+    "id": "tech-003",
+    "category": "technical",
+    "question": "What is the default maximum number of EC2 instances per region in AWS for a new account?",
+    "correct_answer": "32 vCPUs for on-demand instances running standard (A, C, D, H, I, M, R, T, Z) instance families by default for new accounts. This is a vCPU-based limit, not an instance count limit. Limits vary by instance family and can be increased via Service Quotas.",
+    "common_hallucination": "LLMs frequently state '20 instances' (the old EC2 instance-count limit before AWS switched to vCPU-based limits in 2020), or give a single number without clarifying it's vCPU-based and family-specific",
+    "ground_truth_source": "AWS EC2 Service Quotas documentation; AWS announcement of vCPU-based limits (September 2019)",
+    "severity": "medium",
+    "tags": ["AWS", "EC2", "service-limits", "vCPU", "cloud"]
+  },
+  {
+    "id": "tech-004",
+    "category": "technical",
+    "question": "Does parameterized query / prepared statement usage completely prevent SQL injection in all cases?",
+    "correct_answer": "Parameterized queries prevent the most common SQL injection vectors, but are not a complete defense in all scenarios. Risks remain with: dynamic ORDER BY/table name construction (parameters can't parameterize identifiers), second-order SQL injection (stored data used unsanitized later), ORM misuse (raw query fallback), and stored procedure vulnerabilities. Defense-in-depth (input validation, least privilege, WAF) is still required.",
+    "common_hallucination": "LLMs very frequently state that parameterized queries 'completely prevent SQL injection' or 'make SQL injection impossible' — this is dangerously oversimplified and misses known bypass scenarios",
+    "ground_truth_source": "OWASP SQL Injection Prevention Cheat Sheet; OWASP Testing Guide; CWE-89",
+    "severity": "high",
+    "tags": ["SQL-injection", "security", "parameterized-queries", "OWASP", "web-security"]
+  },
+  {
+    "id": "tech-005",
+    "category": "technical",
+    "question": "Is NumPy 1.x compatible with Python 3.12?",
+    "correct_answer": "NumPy 1.26.x is the last NumPy 1.x release series and added Python 3.12 support. NumPy 2.0 (released mid-2024) is the next major version. Earlier NumPy 1.x versions (1.24 and below) do NOT support Python 3.12.",
+    "common_hallucination": "LLMs often state NumPy is fully compatible with Python 3.12 without version qualification, or state it's incompatible without noting 1.26+ added support. Package compatibility matrices change with releases and LLMs frequently use stale information.",
+    "ground_truth_source": "NumPy release notes; NumPy GitHub (numpy/numpy); PyPI release history",
+    "severity": "medium",
+    "tags": ["NumPy", "Python", "compatibility", "Python-3.12", "dependencies"]
+  }
+]

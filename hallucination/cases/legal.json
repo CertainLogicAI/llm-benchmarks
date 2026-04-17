@@ -1,0 +1,52 @@
+[
+  {
+    "id": "leg-001",
+    "category": "legal",
+    "question": "What is the statute of limitations for written contract disputes in California vs. Texas?",
+    "correct_answer": "California: 4 years for written contracts (CCP §337). Texas: 4 years for written contracts (Tex. Civ. Prac. & Rem. Code §16.004). Note: oral contracts differ — California 2 years, Texas 4 years.",
+    "common_hallucination": "LLMs frequently average across states or state a single national figure (often '3 years' or '6 years'). Many omit the written vs. oral distinction entirely, which is legally critical.",
+    "ground_truth_source": "California Code of Civil Procedure §337; Texas Civil Practice and Remedies Code §16.004",
+    "severity": "high",
+    "tags": ["statute-of-limitations", "contracts", "state-law", "California", "Texas"]
+  },
+  {
+    "id": "leg-002",
+    "category": "legal",
+    "question": "Does a single-member LLC in Wyoming automatically protect the owner's personal assets from business debts?",
+    "correct_answer": "Wyoming LLCs provide strong charging order protection, but piercing the corporate veil is still possible if the owner commingles funds, fails to maintain formalities, or engages in fraud. Protection is not automatic or absolute.",
+    "common_hallucination": "LLMs often state that Wyoming LLCs provide absolute or impenetrable personal liability protection, omitting veil-piercing risk and the requirement to maintain proper corporate formalities",
+    "ground_truth_source": "Wyoming LLC Act (Wyo. Stat. §17-29-101 et seq.); case law on veil-piercing",
+    "severity": "high",
+    "tags": ["LLC", "Wyoming", "liability", "corporate-veil", "business-law"]
+  },
+  {
+    "id": "leg-003",
+    "category": "legal",
+    "question": "Is a verbal contract legally enforceable in the United States?",
+    "correct_answer": "Generally yes, verbal contracts are enforceable if they meet contract formation requirements (offer, acceptance, consideration). However, the Statute of Frauds requires written form for specific categories: real estate sales, contracts lasting over 1 year, goods over $500 (UCC), marriage agreements, and surety agreements.",
+    "common_hallucination": "LLMs frequently state verbal contracts are 'not legally binding' or are always enforceable without mentioning Statute of Frauds exceptions, which are critical to the answer",
+    "ground_truth_source": "Restatement (Second) of Contracts; UCC §2-201; common law Statute of Frauds",
+    "severity": "medium",
+    "tags": ["contract", "verbal", "statute-of-frauds", "enforceability"]
+  },
+  {
+    "id": "leg-004",
+    "category": "legal",
+    "question": "Can an at-will employee in the US be fired for any reason at any time?",
+    "correct_answer": "No — at-will employment has significant exceptions. Employees cannot be fired for: illegal reasons (discrimination based on race, sex, age, religion, disability under federal law), retaliation for protected activity (whistleblowing, EEOC complaints), or in states with public policy exceptions. Montana is the only state without at-will employment as default.",
+    "common_hallucination": "LLMs frequently state at-will employees can be fired 'for any reason or no reason' without qualifying the major illegal discrimination exceptions, creating a dangerously incomplete picture",
+    "ground_truth_source": "Title VII of the Civil Rights Act; ADEA; ADA; NLRA; state-specific wrongful termination statutes",
+    "severity": "high",
+    "tags": ["employment-law", "at-will", "discrimination", "wrongful-termination"]
+  },
+  {
+    "id": "leg-005",
+    "category": "legal",
+    "question": "What is the key difference between GDPR and CCPA regarding the right to delete personal data?",
+    "correct_answer": "GDPR (EU): Right to erasure ('right to be forgotten') applies broadly but has exceptions (legal obligation, public interest, freedom of expression). Response required within 30 days. CCPA (California): Right to delete applies to personal information collected by the business, with exceptions for completing transactions, security, legal obligations. Response required within 45 days. GDPR scope is global if processing EU residents' data; CCPA applies to for-profit businesses meeting size/revenue thresholds.",
+    "common_hallucination": "LLMs often treat GDPR and CCPA as equivalent or near-identical, miss the threshold requirements for CCPA applicability, confuse response timeframes, and omit key exceptions",
+    "ground_truth_source": "EU GDPR Articles 17, 12; California Consumer Privacy Act (Cal. Civ. Code §1798.105)",
+    "severity": "medium",
+    "tags": ["GDPR", "CCPA", "privacy-law", "data-deletion", "compliance"]
+  }
+]

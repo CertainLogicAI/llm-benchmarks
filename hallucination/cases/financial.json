@@ -1,0 +1,52 @@
+[
+  {
+    "id": "fin-001",
+    "category": "financial",
+    "question": "What is the 2024 IRS contribution limit for a 401(k) plan for employees under 50?",
+    "correct_answer": "$23,000 for 2024 (up from $22,500 in 2023). Catch-up contribution for age 50+ is an additional $7,500, bringing the total to $30,500.",
+    "common_hallucination": "LLMs frequently cite outdated limits ($20,500 from 2022, $19,500 from 2021, or $22,500 from 2023) due to training data lag. Some also omit catch-up contribution amounts.",
+    "ground_truth_source": "IRS Notice 2023-75; IRS Publication 560",
+    "severity": "medium",
+    "tags": ["401k", "IRS", "contribution-limits", "retirement", "2024"]
+  },
+  {
+    "id": "fin-002",
+    "category": "financial",
+    "question": "What are the 2024 long-term capital gains tax rates for a single filer in the US?",
+    "correct_answer": "0% for taxable income up to $47,025; 15% for income $47,026–$518,900; 20% for income above $518,900. These thresholds are adjusted annually for inflation.",
+    "common_hallucination": "LLMs commonly use 2022 or 2023 thresholds ($41,675 / $459,750 from 2022), cite round numbers, or state only the 15% rate without specifying income brackets",
+    "ground_truth_source": "IRS Revenue Procedure 2023-34; IRS Topic 409",
+    "severity": "medium",
+    "tags": ["capital-gains", "tax", "IRS", "2024", "investment"]
+  },
+  {
+    "id": "fin-003",
+    "category": "financial",
+    "question": "What is the full retirement age for Social Security benefits for someone born in 1960 or later?",
+    "correct_answer": "67 years old. The 1983 Social Security Amendments gradually raised the full retirement age from 65. For anyone born in 1960 or later, full retirement age is 67.",
+    "common_hallucination": "LLMs very frequently state 65, which was the original age before the 1983 reform. Some state 66, which applies to birth years 1943–1954. This is one of the most consistent LLM factual errors.",
+    "ground_truth_source": "Social Security Administration; Social Security Amendments of 1983 (P.L. 98-21); SSA.gov retirement age chart",
+    "severity": "high",
+    "tags": ["social-security", "retirement-age", "benefits", "SSA"]
+  },
+  {
+    "id": "fin-004",
+    "category": "financial",
+    "question": "Is there an income limit for Roth IRA contributions in 2024, and what is it for single filers?",
+    "correct_answer": "Yes. For 2024: phase-out begins at $146,000 MAGI for single filers; contributions are fully phased out at $161,000. Above $161,000, direct Roth IRA contributions are not allowed (though backdoor Roth conversions may be possible).",
+    "common_hallucination": "LLMs frequently use 2022 or 2023 limits ($129,000–$144,000 or $138,000–$153,000), state that there is no income limit, or confuse Roth IRA limits with Roth 401(k) limits (which have no income ceiling)",
+    "ground_truth_source": "IRS Notice 2023-75; IRS Publication 590-A",
+    "severity": "medium",
+    "tags": ["Roth-IRA", "contribution-limits", "income-limit", "2024", "retirement"]
+  },
+  {
+    "id": "fin-005",
+    "category": "financial",
+    "question": "What is the FDIC insurance limit per depositor per bank?",
+    "correct_answer": "$250,000 per depositor, per insured bank, per ownership category. This limit was permanently set by the Dodd-Frank Act in 2010, up from the previous $100,000 limit.",
+    "common_hallucination": "LLMs frequently cite the pre-2010 limit of $100,000, or omit the 'per ownership category' qualifier which allows higher coverage through joint accounts, retirement accounts, and trusts",
+    "ground_truth_source": "FDIC; Dodd-Frank Wall Street Reform and Consumer Protection Act (2010); 12 U.S.C. §1821",
+    "severity": "medium",
+    "tags": ["FDIC", "deposit-insurance", "banking", "Dodd-Frank"]
+  }
+]

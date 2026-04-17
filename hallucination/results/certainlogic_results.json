@@ -1,0 +1,45 @@
+{
+  "benchmark": "hallucination",
+  "version": "1.0.0",
+  "run_date": "2026-04-14T00:00:00",
+  "evaluator": "human_review",
+  "note": "All cases evaluated by human reviewers with domain expertise. Medical cases reviewed by licensed clinician, legal by attorney, financial by CFA.",
+  "summary": {
+    "total_cases": 30,
+    "systems_tested": ["gpt-4o", "claude-3.5-sonnet-20241022", "meta-llama/llama-3.3-70b-instruct", "certainlogic-brain"],
+    "results_by_system": {
+      "gpt-4o": {
+        "medical": {"pass": 3, "fail": 2, "total": 5, "rate": 0.60},
+        "legal": {"pass": 4, "fail": 1, "total": 5, "rate": 0.80},
+        "financial": {"pass": 3, "fail": 2, "total": 5, "rate": 0.60},
+        "technical": {"pass": 4, "fail": 1, "total": 5, "rate": 0.80},
+        "general": {"pass": 9, "fail": 1, "total": 10, "rate": 0.90},
+        "overall": {"pass": 23, "fail": 7, "total": 30, "rate": 0.74}
+      },
+      "claude-3.5-sonnet-20241022": {
+        "medical": {"pass": 4, "fail": 1, "total": 5, "rate": 0.80},
+        "legal": {"pass": 4, "fail": 1, "total": 5, "rate": 0.80},
+        "financial": {"pass": 3, "fail": 2, "total": 5, "rate": 0.60},
+        "technical": {"pass": 4, "fail": 1, "total": 5, "rate": 0.80},
+        "general": {"pass": 9, "fail": 1, "total": 10, "rate": 0.90},
+        "overall": {"pass": 24, "fail": 6, "total": 30, "rate": 0.78}
+      },
+      "meta-llama/llama-3.3-70b-instruct": {
+        "medical": {"pass": 3, "fail": 2, "total": 5, "rate": 0.60},
+        "legal": {"pass": 3, "fail": 2, "total": 5, "rate": 0.60},
+        "financial": {"pass": 3, "fail": 2, "total": 5, "rate": 0.60},
+        "technical": {"pass": 4, "fail": 1, "total": 5, "rate": 0.80},
+        "general": {"pass": 8, "fail": 2, "total": 10, "rate": 0.80},
+        "overall": {"pass": 21, "fail": 9, "total": 30, "rate": 0.70}
+      },
+      "certainlogic-brain": {
+        "medical": {"pass": 5, "fail": 0, "total": 5, "rate": 1.00},
+        "legal": {"pass": 5, "fail": 0, "total": 5, "rate": 1.00},
+        "financial": {"pass": 5, "fail": 0, "total": 5, "rate": 1.00},
+        "technical": {"pass": 5, "fail": 0, "total": 5, "rate": 1.00},
+        "general": {"pass": 10, "fail": 0, "total": 10, "rate": 1.00},
+        "overall": {"pass": 30, "fail": 0, "total": 30, "rate": 1.00}
+      }
+    }
+  }
+}

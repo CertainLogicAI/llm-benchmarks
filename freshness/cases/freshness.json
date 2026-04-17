@@ -1,0 +1,222 @@
+[
+  {
+    "id": "frsh-001",
+    "category": "freshness",
+    "question": "What is the IRS 401(k) employee contribution limit for 2025?",
+    "correct_answer": "$23,500 for 2025 (up from $23,000 in 2024). Catch-up contribution for age 50+ remains $7,500, for a total of $31,000. New for 2025: ages 60-63 get a higher catch-up of $11,250.",
+    "common_llm_error": "LLMs trained before late 2024 cite the 2024 limit of $23,000, or older limits of $22,500 (2023) or $20,500 (2022). Many are unaware of the new age 60-63 catch-up provision added by SECURE 2.0.",
+    "ground_truth_source": "IRS Notice 2024-80; IRS.gov retirement plans page; SECURE 2.0 Act of 2022",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["401k", "IRS", "retirement", "contribution-limits", "2025", "SECURE-2.0"]
+  },
+  {
+    "id": "frsh-002",
+    "category": "freshness",
+    "question": "What is the IRS Traditional IRA contribution limit for 2025?",
+    "correct_answer": "$7,000 for 2025 (unchanged from 2024). Catch-up contribution for age 50+ remains $1,000, for a total of $8,000.",
+    "common_llm_error": "LLMs frequently cite the pre-2023 limit of $6,000 or $6,500. The $7,000 limit took effect in 2024 and continues into 2025.",
+    "ground_truth_source": "IRS Notice 2024-80; IRS Publication 590-A",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["IRA", "IRS", "retirement", "contribution-limits", "2025"]
+  },
+  {
+    "id": "frsh-003",
+    "category": "freshness",
+    "question": "What is the 2025 HSA contribution limit for an individual with self-only HDHP coverage?",
+    "correct_answer": "$4,300 for self-only coverage in 2025 (up from $4,150 in 2024). Family coverage limit is $8,550. Catch-up for age 55+ is an additional $1,000.",
+    "common_llm_error": "LLMs cite 2024 limits ($4,150 / $8,300), 2023 limits ($3,850 / $7,750), or older figures. HSA limits adjust annually for inflation.",
+    "ground_truth_source": "IRS Revenue Procedure 2024-25; IRS Publication 969",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["HSA", "IRS", "health-savings", "HDHP", "2025"]
+  },
+  {
+    "id": "frsh-004",
+    "category": "freshness",
+    "question": "What is the full retirement age for Social Security for someone born in 1960 or later?",
+    "correct_answer": "67 years old. The 1983 Social Security Amendments gradually raised the full retirement age from 65. For anyone born in 1960 or later, full retirement age is 67.",
+    "common_llm_error": "LLMs almost universally state 65 — the original age before 1983. Some state 66, which applies to birth years 1943-1954. This is one of the most consistent and high-stakes LLM factual errors.",
+    "ground_truth_source": "Social Security Administration; Social Security Amendments of 1983 (P.L. 98-21); SSA.gov retirement age chart",
+    "severity": "high",
+    "last_verified": "2026-04-17",
+    "tags": ["social-security", "retirement-age", "SSA", "benefits"]
+  },
+  {
+    "id": "frsh-005",
+    "category": "freshness",
+    "question": "What is the federal minimum wage in the United States as of 2025?",
+    "correct_answer": "$7.25 per hour — unchanged since July 24, 2009. Many states and localities have higher minimums. As of 2025, there is no enacted federal increase despite multiple legislative proposals.",
+    "common_llm_error": "Some LLMs incorrectly state that the federal minimum wage was raised (it was not as of early 2026). Others confuse the federal rate with higher state minimums (e.g., California at $16.50, Washington at $16.66).",
+    "ground_truth_source": "U.S. Department of Labor; Fair Labor Standards Act; DOL Wage and Hour Division",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["minimum-wage", "federal", "labor", "DOL"]
+  },
+  {
+    "id": "frsh-006",
+    "category": "freshness",
+    "question": "What is the 2025 ACA (Affordable Care Act) income threshold for premium tax credit eligibility for a single individual?",
+    "correct_answer": "For 2025, individuals with income between 100% and 400% of the Federal Poverty Level (FPL) qualify for premium tax credits. The 2025 FPL for a single person is $15,060, so the range is $15,060–$60,240. The American Rescue Plan also extended credits to those above 400% FPL who pay more than 8.5% of income on premiums.",
+    "common_llm_error": "LLMs use outdated FPL figures from 2022-2023, state the hard 400% cap without mentioning ARP extension, or use wrong base FPL amounts.",
+    "ground_truth_source": "HHS 2025 Poverty Guidelines (Federal Register Jan 2025); CMS ACA Premium Tax Credit guidance",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["ACA", "healthcare", "premium-tax-credit", "FPL", "2025"]
+  },
+  {
+    "id": "frsh-007",
+    "category": "freshness",
+    "question": "What is the current federal funds rate target range set by the Federal Reserve as of early 2026?",
+    "correct_answer": "The FOMC held rates steady at 4.25%–4.50% through early 2026, following rate cuts in late 2024 (from 5.25%–5.50%). Check the Federal Reserve website for the most current decision.",
+    "common_llm_error": "LLMs with pre-2024 training data state 5.25%–5.50% (the peak rate in 2023). Models trained through mid-2024 may not reflect the rate cuts that began in September 2024. Federal Reserve policy changes at each FOMC meeting (roughly every 6 weeks).",
+    "ground_truth_source": "Federal Reserve FOMC Statements; federalreserve.gov/monetarypolicy",
+    "severity": "high",
+    "last_verified": "2026-04-17",
+    "tags": ["federal-reserve", "interest-rate", "FOMC", "monetary-policy"]
+  },
+  {
+    "id": "frsh-008",
+    "category": "freshness",
+    "question": "What Python versions are currently in active support (not end-of-life) as of 2026?",
+    "correct_answer": "As of early 2026: Python 3.9 (security-only until Oct 2025 — now EOL), Python 3.10 (security-only until Oct 2026), Python 3.11 (security-only until Oct 2027), Python 3.12 (active until Oct 2028), Python 3.13 (active until Oct 2029). Python 3.9 reached EOL in October 2025.",
+    "common_llm_error": "LLMs with stale training data list Python 3.8 or 3.9 as actively supported, or give incorrect EOL dates. Python 3.8 EOL was October 2024; 3.9 EOL was October 2025.",
+    "ground_truth_source": "Python.org developer lifecycle page; PEPs 596, 602, 693, 719, 745",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["python", "EOL", "versioning", "developer-tools"]
+  },
+  {
+    "id": "frsh-009",
+    "category": "freshness",
+    "question": "What is the current composition of the U.S. Supreme Court as of 2026 — how many justices were appointed by Republican vs. Democratic presidents?",
+    "correct_answer": "As of early 2026: 6 justices appointed by Republican presidents (Roberts, Thomas, Alito, Gorsuch, Kavanaugh, Barrett), 3 by Democratic presidents (Sotomayor, Kagan, Jackson). Ketanji Brown Jackson replaced Stephen Breyer in 2022.",
+    "common_llm_error": "LLMs may state Breyer is still on the court, use the pre-2022 composition, or get the appointing president wrong for recent justices.",
+    "ground_truth_source": "Supreme Court of the United States; supremecourt.gov/about/biographies.aspx",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["supreme-court", "judiciary", "SCOTUS"]
+  },
+  {
+    "id": "frsh-010",
+    "category": "freshness",
+    "question": "Who is the current CEO of OpenAI as of 2025?",
+    "correct_answer": "Sam Altman. He was briefly removed by the board in November 2023 and reinstated within days. He has served as CEO since OpenAI's founding and continues in the role as of early 2026.",
+    "common_llm_error": "Models trained during the November 2023 board crisis may have conflicting information. Some older models may not know Altman was reinstated. A small number of models confuse this with Greg Brockman's departure or other leadership changes.",
+    "ground_truth_source": "OpenAI.com; SEC filings; contemporaneous news coverage (Bloomberg, WSJ)",
+    "severity": "low",
+    "last_verified": "2026-04-17",
+    "tags": ["OpenAI", "CEO", "leadership", "tech"]
+  },
+  {
+    "id": "frsh-011",
+    "category": "freshness",
+    "question": "What is the current AWS Lambda maximum execution timeout as of 2025?",
+    "correct_answer": "15 minutes (900 seconds). This limit was raised from 5 minutes in 2018 and has remained at 15 minutes since. The default timeout is 3 seconds; maximum configurable is 900 seconds.",
+    "common_llm_error": "Older LLMs state 5 minutes (the pre-2018 limit). Some state 10 minutes (never correct). The 15-minute limit is well-established but models with early training cutoffs may have the wrong value.",
+    "ground_truth_source": "AWS Lambda documentation; AWS Lambda quotas page",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["AWS", "Lambda", "serverless", "cloud", "limits"]
+  },
+  {
+    "id": "frsh-012",
+    "category": "freshness",
+    "question": "What AI model did Anthropic release as its flagship model in mid-2024?",
+    "correct_answer": "Claude 3.5 Sonnet, released June 20, 2024. It was positioned as faster and more capable than Claude 3 Opus at a lower cost. Anthropic later released an updated Claude 3.5 Sonnet in October 2024 and Claude 3.5 Haiku.",
+    "common_llm_error": "Models trained before June 2024 will not know about Claude 3.5 Sonnet and may describe Claude 3 Opus as the current flagship. Models trained in early 2024 may describe Claude 3 as the latest.",
+    "ground_truth_source": "Anthropic.com; Anthropic press releases; Claude model documentation",
+    "severity": "low",
+    "last_verified": "2026-04-17",
+    "tags": ["Anthropic", "Claude", "AI-models", "LLM-releases"]
+  },
+  {
+    "id": "frsh-013",
+    "category": "freshness",
+    "question": "What is the 2025 Medicare Part B standard monthly premium?",
+    "correct_answer": "$185.00 per month for 2025 (up from $174.70 in 2024). Higher-income beneficiaries pay more via IRMAA surcharges. The annual deductible is $257.",
+    "common_llm_error": "LLMs cite outdated premiums: $170.10 (2022), $164.90 (2023), $174.70 (2024). Medicare Part B premiums change annually and are a common source of stale LLM data.",
+    "ground_truth_source": "CMS.gov; CMS 2025 Medicare Parts A and B premiums fact sheet",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["Medicare", "CMS", "healthcare", "premiums", "2025"]
+  },
+  {
+    "id": "frsh-014",
+    "category": "freshness",
+    "question": "What is the current Node.js LTS (Long-Term Support) version in active support as of early 2026?",
+    "correct_answer": "Node.js 22 (LTS 'Jod', codename) is in Active LTS from October 2024 through April 2026. Node.js 20 (LTS 'Iron') is in Maintenance LTS until April 2026. Node.js 18 reached EOL in April 2025.",
+    "common_llm_error": "LLMs may state Node.js 18 as current LTS (it reached EOL April 2025), or cite Node.js 16 (EOL September 2023). The LTS cycle advances every October.",
+    "ground_truth_source": "nodejs.org/en/about/previous-releases; Node.js release schedule",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["nodejs", "LTS", "EOL", "developer-tools", "javascript"]
+  },
+  {
+    "id": "frsh-015",
+    "category": "freshness",
+    "question": "What is the 2025 Social Security taxable wage base (earnings subject to Social Security tax)?",
+    "correct_answer": "$176,100 for 2025 (up from $168,600 in 2024). Earnings above this amount are not subject to the 6.2% Social Security payroll tax.",
+    "common_llm_error": "LLMs cite earlier wage bases: $160,200 (2023), $147,000 (2022), $142,800 (2021). The wage base increases most years and is a reliable marker of training data freshness.",
+    "ground_truth_source": "SSA.gov; Social Security Administration COLA announcement October 2024",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["social-security", "wage-base", "payroll-tax", "SSA", "2025"]
+  },
+  {
+    "id": "frsh-016",
+    "category": "freshness",
+    "question": "What is the current corporate federal income tax rate in the United States as of 2025?",
+    "correct_answer": "21% flat rate, enacted by the Tax Cuts and Jobs Act of 2017, effective January 1, 2018. This replaced the previous graduated rate structure with a top rate of 35%. The 21% rate remains in effect as of 2025 — no legislation has changed it.",
+    "common_llm_error": "Some LLMs state 35% (the pre-2018 top rate) or describe a graduated structure. Others may speculate about proposed rate increases from Build Back Better Act that were never enacted.",
+    "ground_truth_source": "Tax Cuts and Jobs Act (P.L. 115-97); IRS Publication 542; 26 U.S.C. §11",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["corporate-tax", "TCJA", "IRS", "tax-rate"]
+  },
+  {
+    "id": "frsh-017",
+    "category": "freshness",
+    "question": "Is Bitcoin considered a commodity or a security under U.S. federal law as of 2025?",
+    "correct_answer": "Bitcoin is widely treated as a commodity under U.S. law. The CFTC has asserted jurisdiction over Bitcoin as a commodity. The SEC has not classified Bitcoin as a security. The spot Bitcoin ETFs approved by the SEC in January 2024 reinforced this treatment. Note: regulation is still evolving.",
+    "common_llm_error": "LLMs with pre-2024 training may describe Bitcoin's legal status as uncertain or state the SEC's position is ambiguous. The spot ETF approval in January 2024 was a significant clarifying event many models miss.",
+    "ground_truth_source": "CFTC; SEC; SEC approval of spot Bitcoin ETFs January 10, 2024",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["bitcoin", "cryptocurrency", "SEC", "CFTC", "regulation"]
+  },
+  {
+    "id": "frsh-018",
+    "category": "freshness",
+    "question": "What was the FDA-approved drug ozempic (semaglutide) originally approved to treat, and what has it been approved for since?",
+    "correct_answer": "Ozempic (semaglutide injection) was originally FDA-approved in December 2017 for type 2 diabetes. In June 2021, the FDA approved Wegovy (higher-dose semaglutide) for chronic weight management. In March 2024, the FDA approved Wegovy to reduce cardiovascular risk in adults with obesity/overweight and established cardiovascular disease.",
+    "common_llm_error": "LLMs may not know about the March 2024 cardiovascular risk reduction approval, which significantly expanded the indicated population. Some describe semaglutide only as a diabetes drug, missing the weight management and CV risk indications.",
+    "ground_truth_source": "FDA Drug Database; FDA press release March 8, 2024 (SELECT trial); Novo Nordisk",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["FDA", "semaglutide", "ozempic", "wegovy", "drug-approval", "2024"]
+  },
+  {
+    "id": "frsh-019",
+    "category": "freshness",
+    "question": "What is the 2025 annual gift tax exclusion amount per recipient?",
+    "correct_answer": "$19,000 per recipient per year in 2025 (up from $18,000 in 2024 and $17,000 in 2023). Gifts below this amount do not count against the lifetime exemption and require no gift tax return.",
+    "common_llm_error": "LLMs commonly cite $16,000 (2022), $17,000 (2023), or $18,000 (2024). The annual exclusion adjusts in $1,000 increments for inflation and is a reliable staleness indicator.",
+    "ground_truth_source": "IRS Revenue Procedure 2024-40; IRS Publication 559; 26 U.S.C. §2503",
+    "severity": "medium",
+    "last_verified": "2026-04-17",
+    "tags": ["gift-tax", "IRS", "estate-planning", "exclusion", "2025"]
+  },
+  {
+    "id": "frsh-020",
+    "category": "freshness",
+    "question": "What OSHA permissible exposure limit (PEL) applies to respirable crystalline silica dust for general industry workers (8-hour TWA)?",
+    "correct_answer": "50 micrograms per cubic meter (μg/m³) as an 8-hour time-weighted average (TWA). OSHA updated its silica rule in 2016 (effective June 2018 for general industry), cutting the old PEL of 100 μg/m³ in half.",
+    "common_llm_error": "LLMs trained before 2018-2019 may cite the old PEL of 100 μg/m³, which was the standard for decades before the 2016 rule. The new 50 μg/m³ limit is now well-established but still appears incorrectly in LLM responses.",
+    "ground_truth_source": "OSHA Final Rule on Occupational Exposure to Respirable Crystalline Silica (29 CFR 1910.1053); effective June 23, 2018 for general industry",
+    "severity": "high",
+    "last_verified": "2026-04-17",
+    "tags": ["OSHA", "silica", "workplace-safety", "PEL", "industrial-hygiene"]
+  }
+]

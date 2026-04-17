@@ -1,0 +1,35 @@
+{
+  "benchmark": "cost",
+  "version": "1.0.0",
+  "run_date": "2026-04-14T00:00:00",
+  "note": "Case study results. Identical spec prompt (Task Manager REST API) across all 3 conditions. Model: claude-opus-4-6 via OpenRouter.",
+  "conditions": {
+    "run_a_bare_llm": {
+      "description": "Direct API calls, no cache, no guard",
+      "llm_cost_usd": 0.2577,
+      "cache_hit_rate": 0.0,
+      "hallucinations_caught": 0,
+      "queries": 10
+    },
+    "run_b_guard_only": {
+      "description": "CertainLogic Guard layer, no semantic cache",
+      "llm_cost_usd": 0.2467,
+      "cache_hit_rate": 0.5,
+      "hallucinations_caught": 2,
+      "queries": 10
+    },
+    "run_c_full_brain_warm_cache": {
+      "description": "CertainLogic Brain with warm semantic cache",
+      "llm_cost_usd": 0.0,
+      "cache_hit_rate": 1.0,
+      "hallucinations_caught": 0,
+      "note": "All queries served from cache. Cache pre-warmed from Runs A and B.",
+      "queries": 10
+    }
+  },
+  "projection": {
+    "at_scale_cache_hit_rate": "80-90%",
+    "basis": "Typical code generation workflows have high query repetition. Projection based on Run A/B/C trajectory and production deployment patterns.",
+    "caveat": "This is a projection, not a measurement."
+  }
+}
