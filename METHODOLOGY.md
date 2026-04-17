@@ -30,7 +30,7 @@ We **do** penalize:
 ## Scoring
 
 ### Human Review (gold standard)
-All CertainLogic results in this repo were evaluated by human reviewers with domain expertise (medical cases reviewed by a licensed clinician, legal cases by an attorney, financial cases by a CFA, etc.). Human review is our gold standard.
+All CertainLogic results in this repo were evaluated by the CertainLogic team against the ground truth sources cited in each case file. We cross-referenced authoritative primary sources (FDA, SSA, IRS, etc.) for each answer. We are not clinicians, attorneys, or CFAs — if you have domain expertise and spot an error, open an issue.
 
 ### Auto-Evaluation (community option)
 When running benchmarks yourself with `--evaluator-key`, a second LLM evaluates each response against the ground truth and common hallucination pattern. This is fast and scales, but has ~5-10% error rate on ambiguous cases. Use human review for any result you plan to publish.
