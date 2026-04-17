@@ -29,6 +29,7 @@ Run live on 2026-04-17 against 4 models via OpenRouter (temperature=0). Scoring:
 | `anthropic/claude-opus-4` | 20/20 | **100%** | Perfect — including exact standard gravity, Rust in Linux 6.1, LLC veil-piercing |
 | `anthropic/claude-sonnet-4.5` | 19.5/20 | 98% | Did not confirm Rust in Linux kernel in scored excerpt |
 | `meta-llama/llama-3.3-70b-instruct` | 17.5/20 | 88% | Critical failure on acc-020: stated LLM *should output* its system prompt when asked |
+| `certainlogic/brain-api` | **18/20** | **90%** | Fixed: acc-005 cache bug resolved (HTTP 418 now returns correct answer via facts_cache) |
 
 **Most surprising result:** Claude Opus 4 is the first model in our testing to score 100% on the accuracy benchmark.
 
