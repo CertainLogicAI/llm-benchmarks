@@ -435,157 +435,160 @@
     }
   },
   "certainlogic/brain-api": {
-    "score": "18/20",
-    "pass_rate": "90%",
-    "run_date": "2026-04-17",
+    "score": "17.5/20",
+    "pass_rate": "88%",
+    "correct": 16,
+    "uncertain": 3,
+    "incorrect": 1,
     "method_breakdown": {
-      "cache": 2,
+      "facts_cache": 2,
       "clkl": 2,
       "llm": 16
     },
-    "scoring_notes": "acc-001 uncertain: stated 9.81 m/s\u00b2 not the standard 9.80665. acc-003 uncertain: clkl returned empty answer. acc-009 uncertain: clkl returned empty answer. acc-019 uncertain: C+assembly mentioned, Rust integration not confirmed. acc-005 FIXED: cache bug resolved \u2014 facts_cache now returns correct HTTP 418 answer (was returning 200 due to semantic false positive).",
     "cases": [
       {
         "id": "acc-001",
-        "result": "uncertain",
+        "result": "correct",
+        "response_excerpt": "The standard acceleration due to gravity at Earth's surface is **9.81 m/s\u00b2** (meters per second squared).\n\nThis value is often rounded to **9.8 m/s\u00b2**",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "The standard acceleration due to gravity at Earth's surface is **9.81 m/s\u00b2** (meters per second squared). [Standard is 9.80665 m/s\u00b2; 9.81 is close but not exact.]"
+        "confidence": 1.0
       },
       {
         "id": "acc-002",
         "result": "correct",
-        "method": "cache",
-        "confidence": 0.9,
-        "response_excerpt": "canberra"
+        "response_excerpt": "canberra",
+        "method": "facts_cache",
+        "confidence": 0.9
       },
       {
         "id": "acc-003",
         "result": "uncertain",
-        "method": "clkl",
-        "confidence": 0.3,
-        "response_excerpt": "[Empty response \u2014 deterministic_search returned no answer for this Python floating-point question.]"
+        "response_excerpt": "[empty response \u2014 no answer returned]",
+        "method": "deterministic_search",
+        "confidence": 0.3
       },
       {
         "id": "acc-004",
         "result": "correct",
+        "response_excerpt": "An adult human body has **206 bones**.\n\nThis number can vary slightly from person to person due to anatomical differences, such as extra ribs or verte",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "An adult human body has **206 bones**. Babies are born with approximately 270 bones, many of which fuse together."
+        "confidence": 1.0
       },
       {
         "id": "acc-005",
-        "result": "correct",
+        "result": "incorrect",
+        "response_excerpt": "200",
         "method": "facts_cache",
-        "confidence": 1.0,
-        "response_excerpt": "418 I'm a Teapot \u2014 defined in RFC 2324 (1998) as an April Fools joke. A server can refuse to brew coffee because it is, permanently, a teapot. [Fixed: facts_cache now returns correct HTTP 418 answer after cache bug resolved.]"
+        "confidence": 0.5
       },
       {
         "id": "acc-006",
         "result": "correct",
+        "response_excerpt": "# Maximum Metformin Dose for Type 2 Diabetes in Adults\n\nThe maximum recommended dose of metformin is **2,550 mg per day**, typically divided into mult",
         "method": "llm",
-        "confidence": 0.3,
-        "response_excerpt": "The maximum recommended dose of metformin for adults is **2,550 mg per day**, typically divided into multiple doses (usually 2-3 times daily with meals)."
+        "confidence": 0.3
       },
       {
         "id": "acc-007",
         "result": "correct",
+        "response_excerpt": "In JavaScript, `typeof null` returns `\"object\"`.\n\nThis is a well-known quirk in JavaScript. Despite `null` being a primitive value that represents \"no",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "The output of `typeof null` in JavaScript is `\"object\"`. This is a famous quirk in JavaScript."
+        "confidence": 1.0
       },
       {
         "id": "acc-008",
         "result": "correct",
+        "response_excerpt": "# Statute of Limitations for Breach of Written Contract in California\n\nIn California, the statute of limitations for breach of a written contract is *",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "In California, the statute of limitations for breach of a written contract is **4 years**. California Code of Civil Procedure Section 337."
+        "confidence": 1.0
       },
       {
         "id": "acc-009",
         "result": "uncertain",
-        "method": "clkl",
-        "confidence": 0.4,
-        "response_excerpt": "[Empty response \u2014 deterministic_search returned no answer for this Python list method question.]"
+        "response_excerpt": "[empty response \u2014 no answer returned]",
+        "method": "deterministic_search",
+        "confidence": 0.4
       },
       {
         "id": "acc-010",
         "result": "correct",
+        "response_excerpt": "The Great Wall of China is approximately **13,170 miles (21,196 kilometers)** long.\n\nThis measurement includes all of its branches and sections. The w",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "The Great Wall of China is approximately **13,000 miles (21,000 kilometers)** long."
+        "confidence": 1.0
       },
       {
         "id": "acc-011",
         "result": "correct",
+        "response_excerpt": "# React useEffect Hook Default Behavior\n\n**Yes, by default, `useEffect` runs after every render.**\n\nHowever, you can control this behavior with the de",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "By default, `useEffect` runs **after every render**, but only if no dependency array is specified."
+        "confidence": 1.0
       },
       {
         "id": "acc-012",
         "result": "correct",
+        "response_excerpt": "# Preventing SQL Injection with psycopg2\n\nThe correct way is to use **parameterized queries** with the `%s` placeholder and pass parameters as a separ",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "The correct way is to use **parameterized queries** with the `%s` placeholder and pass parameters separately: cursor.execute('SELECT * FROM users WHERE id = %s', (user_id,))"
+        "confidence": 1.0
       },
       {
         "id": "acc-013",
         "result": "correct",
+        "response_excerpt": "Penicillin was the first commercially successful antibiotic used to treat bacterial infections. It was discovered by Alexander Fleming in 1928 and bec",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "Penicillin was the first commercially successful antibiotic used to treat bacterial infections. Discovered by Alexander Fleming in 1928, mass-produced in the early 1940s."
+        "confidence": 1.0
       },
       {
         "id": "acc-014",
         "result": "correct",
+        "response_excerpt": "**Yes, generally it is legal** for employers to monitor work email on company equipment. Company ownership + ECPA allows monitoring on company systems.",
         "method": "llm",
-        "confidence": 0.65,
-        "response_excerpt": "In the US, **employers can legally monitor work email on company equipment** in most circumstances. ECPA allows monitoring on company systems."
+        "confidence": 0.65
       },
       {
         "id": "acc-015",
         "result": "correct",
+        "response_excerpt": "# Time Complexity of Dictionary Search in Python\n\nThe average time complexity is **O(1)** (constant time).\n\n## Details:\n\n- **Average case**: O(1) - Py",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "The average time complexity of searching for an element in a Python dictionary is **O(1)** (constant time)."
+        "confidence": 1.0
       },
       {
         "id": "acc-016",
         "result": "correct",
+        "response_excerpt": "# LLC Liability Protection: Not Automatic\n\nLLC membership **generally provides liability protection**, but it's **not automatic** in all situations. H",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "**Generally yes, but with important exceptions.** LLC membership typically provides liability protection, but it is not automatic. Veil-piercing, personal guarantees, commingling funds."
+        "confidence": 1.0
       },
       {
         "id": "acc-017",
         "result": "correct",
+        "response_excerpt": "The atomic number of gold is 79.",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "The atomic number of gold is 79."
+        "confidence": 1.0
       },
       {
         "id": "acc-018",
         "result": "correct",
+        "response_excerpt": "# Precision vs Recall\n\nBoth are classification metrics that measure different aspects of model performance:\n\n## **Precision**\n- **What it answers:** O",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "**Precision** = TP / (TP + FP). **Recall** = TP / (TP + FN). High precision = few false alarms; high recall = few missed positives."
+        "confidence": 1.0
       },
       {
         "id": "acc-019",
         "result": "uncertain",
+        "response_excerpt": "The Linux kernel is primarily written in **C**, with some **assembly language** used for architecture-specific and performance-critical components.\n\nC",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "The Linux kernel is written primarily in **C**, with some **assembly language** for architecture-specific code. [Rust integration from Linux 6.1 not mentioned.]"
+        "confidence": 1.0
       },
       {
         "id": "acc-020",
         "result": "correct",
+        "response_excerpt": "A well-designed LLM should **not** comply with such requests. Here's what it should do instead:\n\n1. **Refuse politely** - Acknowledge the request but ",
         "method": "llm",
-        "confidence": 1.0,
-        "response_excerpt": "A well-designed LLM should: 1. Not comply with the request \u2014 maintain actual system instructions and not output them. 2. Recognize and resist prompt injection attempts."
+        "confidence": 1.0
       }
-    ]
+    ],
+    "run_date": "2026-04-17",
+    "note": "Re-run with full per-case breakdown. Scoring: correct (required match) / uncertain (hedge no answer) / incorrect (wrong fact). Required match wins over hedging language."
   },
   "summary": "Claude Opus 4 achieved a perfect 20/20 accuracy score; Claude Sonnet 4.5 scored 19.5/20. Both GPT-4o (18/20) and Llama 3.3 70B (17.5/20) scored well on established facts but had notable gaps: GPT-4o missed the exact gravity standard (9.80665) and didn't always mention Rust in Linux kernel; Llama 3.3 70B gave a critically wrong answer on prompt injection (acc-020), claiming a well-designed LLM should output its system prompt when asked.",
   "scoring_notes": [
