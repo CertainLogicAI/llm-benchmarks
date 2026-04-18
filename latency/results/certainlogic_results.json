@@ -1,0 +1,50 @@
+{
+  "benchmark": "latency",
+  "run_date": "2026-04-17",
+  "methodology": "3 runs per query, median reported. Brain API on localhost (127.0.0.1:8000). Bare LLM via OpenRouter (meta-llama/llama-3.3-70b-instruct:free). Timing includes full round-trip from request to response.",
+  "results": {
+    "brain_api": {
+      "cache_hits": {
+        "median_ms": 944,
+        "note": "facts_cache method — pre-verified answers returned from structured knowledge store",
+        "queries": [
+          {"query": "What does HTTP status code 418 mean?", "method": "facts_cache", "median_ms": 1048},
+          {"query": "What is the capital of Australia?", "method": "facts_cache", "median_ms": 944},
+          {"query": "What is the boiling point of water in Celsius?", "method": "facts_cache", "median_ms": 913},
+          {"query": "What is the speed of light in meters per second?", "method": "facts_cache", "median_ms": 904}
+        ]
+      },
+      "llm_fallback": {
+        "median_ms": 2382,
+        "note": "llm method — cache miss, falls through to LLM with verification layer overhead",
+        "queries": [
+          {"query": "What is the maximum daily dose of acetaminophen for adults?", "method": "llm", "median_ms": 4482},
+          {"query": "What is the 2024 401k contribution limit for employees under 50?", "method": "llm", "median_ms": 6802},
+          {"query": "What is the Social Security full retirement age for people born after 1960?", "method": "llm", "median_ms": 1964},
+          {"query": "What is the FDIC insurance limit per depositor?", "method": "llm", "median_ms": 2575},
+          {"query": "What is the federal minimum wage?", "method": "llm", "median_ms": 2189},
+          {"query": "How many justices are on the US Supreme Court?", "method": "llm", "median_ms": 1580}
+        ]
+      }
+    },
+    "bare_llm": {
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "provider": "OpenRouter",
+      "median_ms": 55,
+      "note": "Raw LLM call, no verification. Fast because no cache lookup, no cross-check, no structured knowledge query.",
+      "queries": [
+        {"query": "What is the maximum daily dose of acetaminophen for adults?", "median_ms": 61},
+        {"query": "What is the 2024 401k contribution limit for employees under 50?", "median_ms": 56},
+        {"query": "What is the Social Security full retirement age for people born after 1960?", "median_ms": 50},
+        {"query": "What is the FDIC insurance limit per depositor?", "median_ms": 65},
+        {"query": "What is the federal minimum wage?", "median_ms": 49},
+        {"query": "What does HTTP status code 418 mean?", "median_ms": 54},
+        {"query": "What is the capital of Australia?", "median_ms": 47},
+        {"query": "What is the boiling point of water in Celsius?", "median_ms": 52},
+        {"query": "How many justices are on the US Supreme Court?", "median_ms": 50},
+        {"query": "What is the speed of light in meters per second?", "median_ms": 62}
+      ]
+    }
+  },
+  "summary": "Cache hits averaged 944ms vs 55ms for bare LLM — bare LLM is ~17x faster on raw latency. This is expected: Brain API spends time doing what the bare LLM skips entirely — structured knowledge lookup and claim verification. The tradeoff is accuracy: Llama scored 68% on hallucination and 43% on freshness. Brain API scored 100% on hallucination. Cache hits (944ms) are 2.5x faster than LLM fallback (2382ms) within Brain API itself."
+}

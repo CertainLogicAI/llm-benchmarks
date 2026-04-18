@@ -1,9 +1,9 @@
 # LLM Benchmarks
 
-**4 benchmarks testing LLM hallucination, freshness, cost, and catch rate. Run them yourself.**
+**5 benchmarks testing LLM hallucination, freshness, cost, accuracy, and latency. Run them yourself.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Total Cases: 90](https://img.shields.io/badge/Test%20Cases-90-orange?style=flat-square)](.)
+[![Total Cases: 100](https://img.shields.io/badge/Test%20Cases-100-orange?style=flat-square)](.)
 [![Built by CertainLogic](https://img.shields.io/badge/Built%20by-CertainLogic-blue?style=flat-square)](https://certainlogic.ai)
 
 ---
@@ -59,6 +59,16 @@ Run live on 2026-04-17 via OpenRouter. Scoring: correct=1, uncertain/hedge=0.5, 
 
 > At scale: 80–90% of queries hit cache and cost $0. Source: [case study, April 2026](cost/results/certainlogic_results.json)
 
+### Latency Benchmark (10 queries, 3 runs each, median)
+
+| Condition | Median Latency | Notes |
+|-----------|---------------|-------|
+| Brain API — facts_cache hits | **944 ms** | Pre-verified answers from structured knowledge store |
+| Brain API — LLM fallback | **2,382 ms** | Cache miss → verification layer → model |
+| Bare LLM (Llama 3.3 70B via OpenRouter) | **55 ms** | No cache, no verification — raw model output |
+
+> Bare LLM wins on raw speed. Brain API spends that time on verification. On the hallucination benchmark, Llama scored 68% and Brain API scored 100%. Source: [latency benchmark, April 2026](latency/results/certainlogic_results.json)
+
 ### Accuracy Benchmark (20 cases — factual correctness)
 
 Run live on 2026-04-17 via OpenRouter. Scoring: correct=1, uncertain/hedge=0.5, incorrect=0.
@@ -106,6 +116,7 @@ No CertainLogic account required.
 | [freshness/](freshness/) | 20 | Stale training data — facts that change annually | `python freshness/benchmark.py` |
 | [accuracy/](accuracy/) | 20 | Hallucination catch rate — designed to fool models | `python accuracy/benchmark.py` |
 | [cost/](cost/) | — | Token cost under bare LLM / Guard / warm cache conditions | `python cost/benchmark.py` |
+| [latency/](latency/) | 10 | Response time: Brain API cache hits vs LLM fallback vs bare LLM | `python latency/benchmark.py` |
 
 ---
 
