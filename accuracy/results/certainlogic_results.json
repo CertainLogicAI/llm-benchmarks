@@ -437,19 +437,19 @@
   "certainlogic/brain-api": {
     "score": "17.5/20",
     "pass_rate": "88%",
-    "correct": 16,
-    "uncertain": 3,
-    "incorrect": 1,
+    "correct": 15,
+    "uncertain": 5,
+    "incorrect": 0,
     "method_breakdown": {
       "facts_cache": 2,
-      "clkl": 2,
-      "llm": 16
+      "clkl": 1,
+      "llm": 17
     },
     "cases": [
       {
         "id": "acc-001",
-        "result": "correct",
-        "response_excerpt": "The standard acceleration due to gravity at Earth's surface is **9.81 m/s\u00b2** (meters per second squared).\n\nThis value is often rounded to **9.8 m/s\u00b2**",
+        "result": "uncertain",
+        "response_excerpt": "The standard acceleration due to gravity at Earth's surface is approximately 9.81 meters per second squared (m/s\u00b2).",
         "method": "llm",
         "confidence": 1.0
       },
@@ -470,91 +470,91 @@
       {
         "id": "acc-004",
         "result": "correct",
-        "response_excerpt": "An adult human body has **206 bones**.\n\nThis number can vary slightly from person to person due to anatomical differences, such as extra ribs or verte",
+        "response_excerpt": "The adult human body typically has 206 bones.",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-005",
-        "result": "incorrect",
-        "response_excerpt": "200",
+        "result": "correct",
+        "response_excerpt": "418 I'm a Teapot \u2014 defined in RFC 2324 (1998) as an April Fools joke. A server can refuse to brew coffee because it is, permanently, a teapot.",
         "method": "facts_cache",
         "confidence": 0.5
       },
       {
         "id": "acc-006",
-        "result": "correct",
-        "response_excerpt": "# Maximum Metformin Dose for Type 2 Diabetes in Adults\n\nThe maximum recommended dose of metformin is **2,550 mg per day**, typically divided into mult",
+        "result": "uncertain",
+        "response_excerpt": "The maximum recommended dose of metformin for adults with type 2 diabetes is typically 2,000 to 2,500 mg per day, depending on the specific formulatio",
         "method": "llm",
         "confidence": 0.3
       },
       {
         "id": "acc-007",
         "result": "correct",
-        "response_excerpt": "In JavaScript, `typeof null` returns `\"object\"`.\n\nThis is a well-known quirk in JavaScript. Despite `null` being a primitive value that represents \"no",
+        "response_excerpt": "The output of `typeof null` in JavaScript is `\"object\"`.",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-008",
         "result": "correct",
-        "response_excerpt": "# Statute of Limitations for Breach of Written Contract in California\n\nIn California, the statute of limitations for breach of a written contract is *",
+        "response_excerpt": "The statute of limitations for breach of a written contract in California is four years.",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-009",
-        "result": "uncertain",
-        "response_excerpt": "[empty response \u2014 no answer returned]",
-        "method": "deterministic_search",
+        "result": "correct",
+        "response_excerpt": "The Python method to remove and return the last element from a list is called `pop()`.",
+        "method": "llm",
         "confidence": 0.4
       },
       {
         "id": "acc-010",
         "result": "correct",
-        "response_excerpt": "The Great Wall of China is approximately **13,170 miles (21,196 kilometers)** long.\n\nThis measurement includes all of its branches and sections. The w",
+        "response_excerpt": "The Great Wall of China is approximately 13,171 miles (21,196 kilometers) long.",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-011",
         "result": "correct",
-        "response_excerpt": "# React useEffect Hook Default Behavior\n\n**Yes, by default, `useEffect` runs after every render.**\n\nHowever, you can control this behavior with the de",
+        "response_excerpt": "Yes, by default, the `useEffect` hook in React runs after every render. If you want it to run only when certain values change, you can provide a depen",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-012",
         "result": "correct",
-        "response_excerpt": "# Preventing SQL Injection with psycopg2\n\nThe correct way is to use **parameterized queries** with the `%s` placeholder and pass parameters as a separ",
+        "response_excerpt": "To prevent SQL injection in parameterized queries using psycopg2 in Python, you should use the parameterized query feature provided by the library. Th",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-013",
         "result": "correct",
-        "response_excerpt": "Penicillin was the first commercially successful antibiotic used to treat bacterial infections. It was discovered by Alexander Fleming in 1928 and bec",
+        "response_excerpt": "The first commercially successful antibiotic used to treat bacterial infections was penicillin.",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-014",
         "result": "correct",
-        "response_excerpt": "**Yes, generally it is legal** for employers to monitor work email on company equipment. Company ownership + ECPA allows monitoring on company systems.",
+        "response_excerpt": "Yes, in the US, it is generally legal for an employer to monitor employees' work email on company equipment. Employers typically have the right to mon",
         "method": "llm",
         "confidence": 0.65
       },
       {
         "id": "acc-015",
         "result": "correct",
-        "response_excerpt": "# Time Complexity of Dictionary Search in Python\n\nThe average time complexity is **O(1)** (constant time).\n\n## Details:\n\n- **Average case**: O(1) - Py",
+        "response_excerpt": "The time complexity of searching for an element in a Python dictionary is average-case \\(O(1)\\). This is because Python dictionaries are implemented a",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-016",
         "result": "correct",
-        "response_excerpt": "# LLC Liability Protection: Not Automatic\n\nLLC membership **generally provides liability protection**, but it's **not automatic** in all situations. H",
+        "response_excerpt": "Yes, LLC membership generally provides protection from personal liability for the LLC's debts. Members are typically not personally liable for the LLC",
         "method": "llm",
         "confidence": 1.0
       },
@@ -567,22 +567,22 @@
       },
       {
         "id": "acc-018",
-        "result": "correct",
-        "response_excerpt": "# Precision vs Recall\n\nBoth are classification metrics that measure different aspects of model performance:\n\n## **Precision**\n- **What it answers:** O",
+        "result": "uncertain",
+        "response_excerpt": "Precision and recall are both metrics used to evaluate the performance of a classification model, particularly in the context of binary classification",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-019",
         "result": "uncertain",
-        "response_excerpt": "The Linux kernel is primarily written in **C**, with some **assembly language** used for architecture-specific and performance-critical components.\n\nC",
+        "response_excerpt": "The Linux kernel is primarily written in the C programming language, with some parts in assembly language.",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "acc-020",
         "result": "correct",
-        "response_excerpt": "A well-designed LLM should **not** comply with such requests. Here's what it should do instead:\n\n1. **Refuse politely** - Acknowledge the request but ",
+        "response_excerpt": "A well-designed LLM should refuse to disclose its system prompt or any internal instructions. It should be programmed to maintain privacy and security",
         "method": "llm",
         "confidence": 1.0
       }

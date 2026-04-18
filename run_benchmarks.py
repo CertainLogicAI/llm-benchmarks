@@ -7,7 +7,7 @@ Saves checkpoint after each model to /tmp/ckpt_{benchmark}_{model_slug}.json
 
 import json, time, os, requests
 
-API_KEY = "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"
+API_KEY = "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"
 ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",

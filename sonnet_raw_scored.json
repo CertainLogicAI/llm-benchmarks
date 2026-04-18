@@ -1,0 +1,62 @@
+{
+  "model": "claude-sonnet-4-6-raw",
+  "freshness": {
+    "correct": 16,
+    "uncertain": 3,
+    "incorrect": 0,
+    "score": 17.5,
+    "pass_rate": "87.5%",
+    "cases": [
+      {"id": "frsh-001", "result": "correct"},
+      {"id": "frsh-002", "result": "correct"},
+      {"id": "frsh-003", "result": "correct"},
+      {"id": "frsh-004", "result": "correct"},
+      {"id": "frsh-005", "result": "correct"},
+      {"id": "frsh-006", "result": "uncertain"},
+      {"id": "frsh-007", "result": "uncertain"},
+      {"id": "frsh-008", "result": "uncertain"},
+      {"id": "frsh-009", "result": "correct"},
+      {"id": "frsh-010", "result": "correct"},
+      {"id": "frsh-011", "result": "correct"},
+      {"id": "frsh-012", "result": "correct"},
+      {"id": "frsh-013", "result": "correct"},
+      {"id": "frsh-014", "result": "correct"},
+      {"id": "frsh-015", "result": "correct"},
+      {"id": "frsh-016", "result": "correct"},
+      {"id": "frsh-017", "result": "correct"},
+      {"id": "frsh-018", "result": "uncertain"},
+      {"id": "frsh-019", "result": "correct"},
+      {"id": "frsh-020", "result": "correct"}
+    ]
+  },
+  "accuracy": {
+    "correct": 19,
+    "uncertain": 1,
+    "incorrect": 0,
+    "score": 19.5,
+    "pass_rate": "97.5%",
+    "cases": [
+      {"id": "acc-001", "result": "correct"},
+      {"id": "acc-002", "result": "correct"},
+      {"id": "acc-003", "result": "correct"},
+      {"id": "acc-004", "result": "correct"},
+      {"id": "acc-005", "result": "correct"},
+      {"id": "acc-006", "result": "correct"},
+      {"id": "acc-007", "result": "correct"},
+      {"id": "acc-008", "result": "correct"},
+      {"id": "acc-009", "result": "correct"},
+      {"id": "acc-010", "result": "correct"},
+      {"id": "acc-011", "result": "correct"},
+      {"id": "acc-012", "result": "correct"},
+      {"id": "acc-013", "result": "correct"},
+      {"id": "acc-014", "result": "correct"},
+      {"id": "acc-015", "result": "correct"},
+      {"id": "acc-016", "result": "correct"},
+      {"id": "acc-017", "result": "correct"},
+      {"id": "acc-018", "result": "correct"},
+      {"id": "acc-019", "result": "correct"},
+      {"id": "acc-020", "result": "uncertain"}
+    ]
+  },
+  "combined_pct": 92.5
+}

@@ -435,77 +435,77 @@
     }
   },
   "certainlogic/brain-api": {
-    "score": "15.5/20",
-    "pass_rate": "78%",
-    "correct": 13,
-    "uncertain": 5,
-    "incorrect": 2,
+    "score": "14.0/20",
+    "pass_rate": "70%",
+    "correct": 8,
+    "uncertain": 12,
+    "incorrect": 0,
     "method_breakdown": {
-      "facts_cache": 1,
+      "facts_cache": 3,
       "clkl": 1,
-      "llm": 18
+      "llm": 16
     },
     "cases": [
       {
         "id": "frsh-001",
-        "result": "correct",
-        "response_excerpt": "The IRS 401(k) employee contribution limit for 2025 is **$23,500**.\n\nThis represents a $500 increase from the 2024 limit of $23,000.\n\nAdditionally, if",
-        "method": "llm",
+        "result": "uncertain",
+        "response_excerpt": "What is the 2024 401k contribution limit?",
+        "method": "semantic_cache",
         "confidence": 0.65
       },
       {
         "id": "frsh-002",
-        "result": "correct",
-        "response_excerpt": "# IRS Traditional IRA Contribution Limit for 2025\n\nThe contribution limit for Traditional IRAs in 2025 is **$7,000** for individuals under age 50.\n\nFo",
+        "result": "uncertain",
+        "response_excerpt": "I'm sorry, but I don't have information on the IRS Traditional IRA contribution limits for 2025. You may want to check the IRS website or consult a fi",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-003",
-        "result": "correct",
-        "response_excerpt": "The 2025 HSA contribution limit for an individual with self-only HDHP coverage is **$4,300**.\n\nThis is an increase from the 2024 limit of $4,150.",
+        "result": "uncertain",
+        "response_excerpt": "I'm sorry, but I don't have information on the 2025 HSA contribution limits. You may want to check with the IRS or a reliable financial resource for t",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-004",
-        "result": "correct",
-        "response_excerpt": "For someone born in 1960 or later, the full retirement age for Social Security is **67 years old**.",
+        "result": "uncertain",
+        "response_excerpt": "The full retirement age for Social Security for someone born in 1960 or later is 67.",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-005",
-        "result": "uncertain",
-        "response_excerpt": "What is the federal minimum wage in the United States?",
-        "method": "semantic_cache",
-        "confidence": 1.0
+        "result": "correct",
+        "response_excerpt": "7.25 USD per hour",
+        "method": "facts_cache",
+        "confidence": 0.4
       },
       {
         "id": "frsh-006",
         "result": "uncertain",
-        "response_excerpt": "# 2025 ACA Premium Tax Credit Income Threshold\n\nFor a **single individual in 2025**, the income thresholds for ACA premium tax credit eligibility are ",
+        "response_excerpt": "As of my last update, the specific income thresholds for the Affordable Care Act (ACA) premium tax credit eligibility in 2025 have not been officially",
         "method": "llm",
         "confidence": 0.65
       },
       {
         "id": "frsh-007",
         "result": "uncertain",
-        "response_excerpt": "I don't have access to current information as of early 2026. My knowledge was last updated in April 2024, so I cannot tell you what the Federal Reserv",
+        "response_excerpt": "I'm sorry, but I don't have access to information about the federal funds rate target range as of early 2026. You may want to check the latest updates",
         "method": "llm",
         "confidence": 0.65
       },
       {
         "id": "frsh-008",
-        "result": "correct",
-        "response_excerpt": "# Python Versions in Active Support (2026)\n\nAs of 2026, the Python versions in active support are:\n\n- **Python 3.9** - Until October 2025 (EOL before ",
+        "result": "uncertain",
+        "response_excerpt": "I don't have information about Python versions in active support as of 2026, as my training only includes data up to October 2023. You would need to c",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-009",
-        "result": "correct",
-        "response_excerpt": "I don't have reliable information about the composition of the U.S. Supreme Court as of 2026. My knowledge was last updated in April 2024, and the Cou",
+        "result": "uncertain",
+        "response_excerpt": "I'm sorry, but I don't have information on the composition of the U.S. Supreme Court as of 2026. My training only includes data up to October 2023.",
         "method": "llm",
         "confidence": 1.0
       },
@@ -519,70 +519,70 @@
       {
         "id": "frsh-011",
         "result": "correct",
-        "response_excerpt": "As of my last knowledge update in April 2024, the AWS Lambda maximum execution timeout is **15 minutes (900 seconds)**.\n\nHowever, I should note that m",
+        "response_excerpt": "I don't have information on AWS Lambda's maximum execution timeout as of 2025. As of my last update, the maximum execution timeout for AWS Lambda was ",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-012",
-        "result": "correct",
-        "response_excerpt": "Anthropic released **Claude 3.5 Sonnet** as its flagship model in mid-2024 (June 2024). It was designed to offer improved performance across a wide ra",
+        "result": "uncertain",
+        "response_excerpt": "I'm sorry, but I don't have information on any AI models released by Anthropic in mid-2024.",
         "method": "llm",
         "confidence": 0.65
       },
       {
         "id": "frsh-013",
         "result": "uncertain",
-        "response_excerpt": "I don't have access to current 2025 Medicare information. For the most accurate and up-to-date 2025 Medicare Part B standard monthly premium, I recomm",
+        "response_excerpt": "I'm sorry, but I don't have information on the 2025 Medicare Part B standard monthly premium. You may want to check the official Medicare website or c",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-014",
         "result": "uncertain",
-        "response_excerpt": "I don't have access to current information as of early 2026, as my knowledge was last updated in April 2024.\n\nHowever, I can tell you that as of my la",
+        "response_excerpt": "As of early 2026, the current Node.js LTS version in active support is Node.js 20.",
         "method": "llm",
         "confidence": 0.65
       },
       {
         "id": "frsh-015",
-        "result": "incorrect",
-        "response_excerpt": "# 2025 Social Security Taxable Wage Base\n\nThe 2025 Social Security taxable wage base is **$168,600**.\n\nThis means that only the first $168,600 of an i",
-        "method": "llm",
+        "result": "correct",
+        "response_excerpt": "The 2025 Social Security taxable wage base is $176,100. Earnings up to this amount are subject to the 6.2% Social Security tax for employees (12.4% co",
+        "method": "facts_cache",
         "confidence": 1.0
       },
       {
         "id": "frsh-016",
         "result": "correct",
-        "response_excerpt": "As of 2025, the federal corporate income tax rate in the United States is **21%**.\n\nThis rate has been in effect since 2018, when it was reduced from ",
+        "response_excerpt": "I don't have information on the corporate federal income tax rate in the United States for 2025. As of my last update, the corporate tax rate was 21%,",
         "method": "llm",
-        "confidence": 0.65
+        "confidence": 0.3
       },
       {
         "id": "frsh-017",
         "result": "correct",
-        "response_excerpt": "# Bitcoin Classification Under U.S. Federal Law\n\nAs of 2025, **Bitcoin is primarily treated as a commodity**, not a security, under U.S. federal law.\n",
+        "response_excerpt": "As of my last update in October 2023, Bitcoin is generally considered a commodity under U.S. federal law. The Commodity Futures Trading Commission (CF",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-018",
         "result": "correct",
-        "response_excerpt": "# Ozempic (Semaglutide) - FDA Approvals\n\n## Original Approval\nOzempic was originally approved by the FDA in **2017 to treat type 2 diabetes**. It's a ",
+        "response_excerpt": "Ozempic (semaglutide) was originally approved by the FDA to treat type 2 diabetes. Since then, it has also been approved for chronic weight management",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-019",
-        "result": "incorrect",
-        "response_excerpt": "The 2025 annual gift tax exclusion amount is **$18,000 per recipient**. [WRONG \u2014 correct is $19,000 for 2025. $18,000 was 2024.]",
+        "result": "uncertain",
+        "response_excerpt": "I'm sorry, but I don't have information on the 2025 annual gift tax exclusion amount per recipient.",
         "method": "llm",
         "confidence": 1.0
       },
       {
         "id": "frsh-020",
         "result": "correct",
-        "response_excerpt": "# OSHA PEL for Respirable Crystalline Silica in General Industry\n\nThe current OSHA permissible exposure limit (PEL) for respirable crystalline silica ",
+        "response_excerpt": "The OSHA permissible exposure limit (PEL) for respirable crystalline silica dust for general industry workers is 50 micrograms per cubic meter of air ",
         "method": "llm",
         "confidence": 1.0
       }

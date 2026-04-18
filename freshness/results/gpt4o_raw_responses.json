@@ -1,0 +1,142 @@
+[
+  {
+    "id": "frsh-001",
+    "question": "What is the IRS 401(k) employee contribution limit for 2025?",
+    "correct_answer": "$23,500 for 2025 (up from $23,000 in 2024). Catch-up contribution for age 50+ remains $7,500, for a total of $31,000. New for 2025: ages 60-63 get a higher catch-up of $11,250.",
+    "response": "As of my last update, the IRS has not yet announced the 401(k) employee contribution limit for 2025. Contribution limits are typically adjusted annually for inflation, and announcements regarding future limits are usually made towards the end of the preceding year. For the most accurate and up-to-date information, you should check the IRS website or consult a financial advisor closer to the end of 2024.",
+    "excerpt": "As of my last update, the IRS has not yet announced the 401(k) employee contribution limit for 2025. Contribution limits are typically adjusted annual"
+  },
+  {
+    "id": "frsh-002",
+    "question": "What is the IRS Traditional IRA contribution limit for 2025?",
+    "correct_answer": "$7,000 for 2025 (unchanged from 2024). Catch-up contribution for age 50+ remains $1,000, for a total of $8,000.",
+    "response": "As of my last update, the IRS had not yet announced the Traditional IRA contribution limits for 2025. Contribution limits are typically adjusted annually for inflation, and the IRS usually announces these limits in the fall preceding the tax year. For the most accurate and up-to-date information, you should check the IRS website or consult a tax professional closer to the year 2025.",
+    "excerpt": "As of my last update, the IRS had not yet announced the Traditional IRA contribution limits for 2025. Contribution limits are typically adjusted annua"
+  },
+  {
+    "id": "frsh-003",
+    "question": "What is the 2025 HSA contribution limit for an individual with self-only HDHP coverage?",
+    "correct_answer": "$4,300 for self-only coverage in 2025 (up from $4,150 in 2024). Family coverage limit is $8,550. Catch-up for age 55+ is an additional $1,000.",
+    "response": "As of my last update, the IRS had not yet announced the 2025 HSA contribution limits. Typically, the IRS releases these limits annually, usually in the spring for the following year. For the most accurate and up-to-date information, you should check the IRS website or consult with a tax professional closer to the year 2025.",
+    "excerpt": "As of my last update, the IRS had not yet announced the 2025 HSA contribution limits. Typically, the IRS releases these limits annually, usually in th"
+  },
+  {
+    "id": "frsh-004",
+    "question": "What is the full retirement age for Social Security for someone born in 1960 or later?",
+    "correct_answer": "67 years old. The 1983 Social Security Amendments gradually raised the full retirement age from 65. For anyone born in 1960 or later, full retirement age is 67.",
+    "response": "For someone born in 1960 or later, the full retirement age for Social Security is 67. This is the age at which they can claim full Social Security retirement benefits without any reduction.",
+    "excerpt": "For someone born in 1960 or later, the full retirement age for Social Security is 67. This is the age at which they can claim full Social Security ret"
+  },
+  {
+    "id": "frsh-005",
+    "question": "What is the federal minimum wage in the United States as of 2025?",
+    "correct_answer": "$7.25 per hour \u2014 unchanged since July 24, 2009. Many states and localities have higher minimums. As of 2025, there is no enacted federal increase despite multiple legislative proposals.",
+    "response": "As of my last update in October 2023, the federal minimum wage in the United States is $7.25 per hour, and it has been at this rate since 2009. I do not have information on changes that may have occurred after 2023. To find the most current federal minimum wage as of 2025, you would need to check the latest information from a reliable source such as the U.S. Department of Labor or recent government announcements.",
+    "excerpt": "As of my last update in October 2023, the federal minimum wage in the United States is $7.25 per hour, and it has been at this rate since 2009. I do n"
+  },
+  {
+    "id": "frsh-006",
+    "question": "What is the 2025 ACA (Affordable Care Act) income threshold for premium tax credit eligibility for a single individual?",
+    "correct_answer": "For 2025, individuals with income between 100% and 400% of the Federal Poverty Level (FPL) qualify for premium tax credits. The 2025 FPL for a single person is $15,060, so the range is $15,060\u2013$60,240. The American Rescue Plan also extended credits to those above 400% FPL who pay more than 8.5% of income on premiums.",
+    "response": "As of my last update, the specific income thresholds for premium tax credit eligibility under the Affordable Care Act (ACA) for 2025 have not been officially published. Typically, these thresholds are adjusted annually based on the federal poverty level (FPL) and other factors. For the most accurate and up-to-date information, you should check the official resources such as the IRS or healthcare.gov closer to the year 2025. Generally, eligibility for premium tax credits is available to individuals and families with incomes between 100% and 400% of the FPL, but recent legislative changes have sometimes expanded this range temporarily.",
+    "excerpt": "As of my last update, the specific income thresholds for premium tax credit eligibility under the Affordable Care Act (ACA) for 2025 have not been off"
+  },
+  {
+    "id": "frsh-007",
+    "question": "What is the current federal funds rate target range set by the Federal Reserve as of early 2026?",
+    "correct_answer": "The FOMC held rates steady at 4.25%\u20134.50% through early 2026, following rate cuts in late 2024 (from 5.25%\u20135.50%). Check the Federal Reserve website for the most current decision.",
+    "response": "I'm sorry, but I don't have access to real-time data or events beyond October 2023. To find the current federal funds rate target range for early 2026, I recommend checking the latest announcements from the Federal Reserve or reliable financial news sources.",
+    "excerpt": "I'm sorry, but I don't have access to real-time data or events beyond October 2023. To find the current federal funds rate target range for early 2026"
+  },
+  {
+    "id": "frsh-008",
+    "question": "What Python versions are currently in active support (not end-of-life) as of 2026?",
+    "correct_answer": "As of early 2026: Python 3.9 (security-only until Oct 2025 \u2014 now EOL), Python 3.10 (security-only until Oct 2026), Python 3.11 (security-only until Oct 2027), Python 3.12 (active until Oct 2028), Python 3.13 (active until Oct 2029). Python 3.9 reached EOL in October 2025.",
+    "response": "As of 2026, the Python versions that are likely to be in active support, based on the typical Python release and support cycle, would be:\n\n1. **Python 3.11**: Released in October 2022, with active support typically lasting for about 18 months, followed by security fixes for an additional 3.5 years. It would still be receiving security updates in 2026.\n\n2. **Python 3.12**: Released in October 2023, it would be in its active support phase until around April 2025, and then receive security updates until around October 2028.\n\n3. **Python 3.13**: Expected to be released in October 2024, it would be in active support until around April 2026, and then receive security updates until around October 2029.\n\n4. **Python 3.14**: Expected to be released in October 2025, it would be in active support throughout 2026 and beyond, with security updates continuing for several years after.\n\nThese projections are based on the typical release schedule and support policy of the Python Software Foundation, which usually involves a new major release every year and a support lifecycle of about five years for each version. For the most accurate and up-to-date information, you should refer to the official Python website or the Python Developer's Guide.",
+    "excerpt": "As of 2026, the Python versions that are likely to be in active support, based on the typical Python release and support cycle, would be:  1. **Python"
+  },
+  {
+    "id": "frsh-009",
+    "question": "What is the current composition of the U.S. Supreme Court as of 2026 \u2014 how many justices were appointed by Republican vs. Democratic presidents?",
+    "correct_answer": "As of early 2026: 6 justices appointed by Republican presidents (Roberts, Thomas, Alito, Gorsuch, Kavanaugh, Barrett), 3 by Democratic presidents (Sotomayor, Kagan, Jackson). Ketanji Brown Jackson replaced Stephen Breyer in 2022.",
+    "response": "As of my last update in October 2023, I don't have information on the composition of the U.S. Supreme Court in 2026. However, I can provide the composition as of 2023:\n\n1. Chief Justice John Roberts - Appointed by President George W. Bush (Republican)\n2. Justice Clarence Thomas - Appointed by President George H. W. Bush (Republican)\n3. Justice Samuel Alito - Appointed by President George W. Bush (Republican)\n4. Justice Sonia Sotomayor - Appointed by President Barack Obama (Democratic)\n5. Justice Elena Kagan - Appointed by President Barack Obama (Democratic)\n6. Justice Neil Gorsuch - Appointed by President Donald Trump (Republican)\n7. Justice Brett Kavanaugh - Appointed by President Donald Trump (Republican)\n8. Justice Amy Coney Barrett - Appointed by President Donald Trump (Republican)\n9. Justice Ketanji Brown Jackson - Appointed by President Joe Biden (Democratic)\n\nAt that time, there were six justices appointed by Republican presidents and three appointed by Democratic presidents. For the most current information, please check the latest reliable sources.",
+    "excerpt": "As of my last update in October 2023, I don't have information on the composition of the U.S. Supreme Court in 2026. However, I can provide the compos"
+  },
+  {
+    "id": "frsh-010",
+    "question": "Who is the current CEO of OpenAI as of 2025?",
+    "correct_answer": "Sam Altman. He was briefly removed by the board in November 2023 and reinstated within days. He has served as CEO since OpenAI's founding and continues in the role as of early 2026.",
+    "response": "I'm sorry, but I can't provide real-time information or updates beyond October 2023. To find out the current CEO of OpenAI as of 2025, I recommend checking the latest news articles or OpenAI's official website.",
+    "excerpt": "I'm sorry, but I can't provide real-time information or updates beyond October 2023. To find out the current CEO of OpenAI as of 2025, I recommend che"
+  },
+  {
+    "id": "frsh-011",
+    "question": "What is the current AWS Lambda maximum execution timeout as of 2025?",
+    "correct_answer": "15 minutes (900 seconds). This limit was raised from 5 minutes in 2018 and has remained at 15 minutes since. The default timeout is 3 seconds; maximum configurable is 900 seconds.",
+    "response": "As of my last update, AWS Lambda's maximum execution timeout was 15 minutes. However, AWS frequently updates its services, so it's possible that this limit has changed since then. To get the most current information, you should check the official AWS Lambda documentation or the AWS Management Console.",
+    "excerpt": "As of my last update, AWS Lambda's maximum execution timeout was 15 minutes. However, AWS frequently updates its services, so it's possible that this "
+  },
+  {
+    "id": "frsh-012",
+    "question": "What AI model did Anthropic release as its flagship model in mid-2024?",
+    "correct_answer": "Claude 3.5 Sonnet, released June 20, 2024. It was positioned as faster and more capable than Claude 3 Opus at a lower cost. Anthropic later released an updated Claude 3.5 Sonnet in October 2024 and Claude 3.5 Haiku.",
+    "response": "I'm sorry, but I don't have information on events or releases that occurred after October 2023. You might want to check the latest updates from Anthropic's official announcements or trusted news sources for the most current information.",
+    "excerpt": "I'm sorry, but I don't have information on events or releases that occurred after October 2023. You might want to check the latest updates from Anthro"
+  },
+  {
+    "id": "frsh-013",
+    "question": "What is the 2025 Medicare Part B standard monthly premium?",
+    "correct_answer": "$185.00 per month for 2025 (up from $174.70 in 2024). Higher-income beneficiaries pay more via IRMAA surcharges. The annual deductible is $257.",
+    "response": "As of my last update, the Medicare Part B standard monthly premium for 2025 has not been announced. Medicare premiums are typically announced in the fall preceding the coverage year. For the most accurate and up-to-date information, I recommend checking the official Medicare website or contacting Medicare directly.",
+    "excerpt": "As of my last update, the Medicare Part B standard monthly premium for 2025 has not been announced. Medicare premiums are typically announced in the f"
+  },
+  {
+    "id": "frsh-014",
+    "question": "What is the current Node.js LTS (Long-Term Support) version in active support as of early 2026?",
+    "correct_answer": "Node.js 22 (LTS 'Jod', codename) is in Active LTS from October 2024 through April 2026. Node.js 20 (LTS 'Iron') is in Maintenance LTS until April 2026. Node.js 18 reached EOL in April 2025.",
+    "response": "As of early 2026, the Node.js LTS version in active support would likely be Node.js 20. Node.js 20 was released in April 2023 and entered LTS in October 2023. Typically, Node.js LTS versions are actively supported for 18 months, followed by a maintenance period. Therefore, Node.js 20 would still be in active LTS support in early 2026. However, for the most accurate and up-to-date information, you should check the official Node.js release schedule on their website or repository.",
+    "excerpt": "As of early 2026, the Node.js LTS version in active support would likely be Node.js 20. Node.js 20 was released in April 2023 and entered LTS in Octob"
+  },
+  {
+    "id": "frsh-015",
+    "question": "What is the 2025 Social Security taxable wage base (earnings subject to Social Security tax)?",
+    "correct_answer": "$176,100 for 2025 (up from $168,600 in 2024). Earnings above this amount are not subject to the 6.2% Social Security payroll tax.",
+    "response": "As of my last update, the Social Security Administration (SSA) had not announced the taxable wage base for 2025. The taxable wage base is typically adjusted annually based on changes in the national average wage index. For the most current information, you should check the SSA's official announcements or their website.",
+    "excerpt": "As of my last update, the Social Security Administration (SSA) had not announced the taxable wage base for 2025. The taxable wage base is typically ad"
+  },
+  {
+    "id": "frsh-016",
+    "question": "What is the current corporate federal income tax rate in the United States as of 2025?",
+    "correct_answer": "21% flat rate, enacted by the Tax Cuts and Jobs Act of 2017, effective January 1, 2018. This replaced the previous graduated rate structure with a top rate of 35%. The 21% rate remains in effect as of 2025 \u2014 no legislation has changed it.",
+    "response": "As of my last update, the corporate federal income tax rate in the United States was 21%, established by the Tax Cuts and Jobs Act of 2017. However, I do not have information beyond October 2023, so I recommend checking the latest updates from a reliable source or the IRS for any changes that may have occurred since then.",
+    "excerpt": "As of my last update, the corporate federal income tax rate in the United States was 21%, established by the Tax Cuts and Jobs Act of 2017. However, I"
+  },
+  {
+    "id": "frsh-017",
+    "question": "Is Bitcoin considered a commodity or a security under U.S. federal law as of 2025?",
+    "correct_answer": "Bitcoin is widely treated as a commodity under U.S. law. The CFTC has asserted jurisdiction over Bitcoin as a commodity. The SEC has not classified Bitcoin as a security. The spot Bitcoin ETFs approved by the SEC in January 2024 reinforced this treatment. Note: regulation is still evolving.",
+    "response": "As of my last update in October 2023, Bitcoin is generally considered a commodity under U.S. federal law. The Commodity Futures Trading Commission (CFTC) has classified Bitcoin as a commodity, and this classification has been supported by various court rulings. The Securities and Exchange Commission (SEC), on the other hand, has not classified Bitcoin as a security. \n\nHowever, regulatory perspectives can evolve, and it's important to check the most current information or legal interpretations to see if there have been any changes in classification or regulatory approach since 2023.",
+    "excerpt": "As of my last update in October 2023, Bitcoin is generally considered a commodity under U.S. federal law. The Commodity Futures Trading Commission (CF"
+  },
+  {
+    "id": "frsh-018",
+    "question": "What was the FDA-approved drug ozempic (semaglutide) originally approved to treat, and what has it been approved for since?",
+    "correct_answer": "Ozempic (semaglutide injection) was originally FDA-approved in December 2017 for type 2 diabetes. In June 2021, the FDA approved Wegovy (higher-dose semaglutide) for chronic weight management. In March 2024, the FDA approved Wegovy to reduce cardiovascular risk in adults with obesity/overweight and established cardiovascular disease.",
+    "response": "Ozempic (semaglutide) was originally approved by the FDA to treat type 2 diabetes. It is a glucagon-like peptide-1 (GLP-1) receptor agonist that helps to lower blood sugar levels in adults with type 2 diabetes, in conjunction with diet and exercise. Since its initial approval, semaglutide has also been approved for additional uses. Notably, a higher-dose version of semaglutide, marketed under the brand name Wegovy, has been approved for chronic weight management in adults with obesity or overweight conditions who have at least one weight-related condition, such as high blood pressure, type 2 diabetes, or high cholesterol.",
+    "excerpt": "Ozempic (semaglutide) was originally approved by the FDA to treat type 2 diabetes. It is a glucagon-like peptide-1 (GLP-1) receptor agonist that helps"
+  },
+  {
+    "id": "frsh-019",
+    "question": "What is the 2025 annual gift tax exclusion amount per recipient?",
+    "correct_answer": "$19,000 per recipient per year in 2025 (up from $18,000 in 2024 and $17,000 in 2023). Gifts below this amount do not count against the lifetime exemption and require no gift tax return.",
+    "response": "As of my last update, the IRS had not yet announced the annual gift tax exclusion amount for 2025. The exclusion amount is typically adjusted for inflation and announced by the IRS in the fall preceding the tax year. For the most accurate and up-to-date information, you should check the IRS website or consult a tax professional closer to 2025.",
+    "excerpt": "As of my last update, the IRS had not yet announced the annual gift tax exclusion amount for 2025. The exclusion amount is typically adjusted for infl"
+  },
+  {
+    "id": "frsh-020",
+    "question": "What OSHA permissible exposure limit (PEL) applies to respirable crystalline silica dust for general industry workers (8-hour TWA)?",
+    "correct_answer": "50 micrograms per cubic meter (\u03bcg/m\u00b3) as an 8-hour time-weighted average (TWA). OSHA updated its silica rule in 2016 (effective June 2018 for general industry), cutting the old PEL of 100 \u03bcg/m\u00b3 in half.",
+    "response": "The OSHA permissible exposure limit (PEL) for respirable crystalline silica dust for general industry workers is 50 micrograms per cubic meter of air (50 \u00b5g/m\u00b3) as an 8-hour time-weighted average (TWA). This standard is designed to protect workers from the health risks associated with exposure to respirable crystalline silica.",
+    "excerpt": "The OSHA permissible exposure limit (PEL) for respirable crystalline silica dust for general industry workers is 50 micrograms per cubic meter of air "
+  }
+]

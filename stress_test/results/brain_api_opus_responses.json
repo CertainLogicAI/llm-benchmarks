@@ -1,0 +1,202 @@
+[
+  {
+    "id": "stress-001",
+    "question": "What version of Python was the latest stable release as of March 2026?",
+    "correct_answer": "Python 3.14.0a6 (alpha) was the latest pre-release, while Python 3.13.3 was the latest stable release as of March 2026. Python 3.13 was released October 2024.",
+    "common_llm_error": "Opus will likely state Python 3.12.x as latest stable (its cutoff knowledge) or hallucinate a specific 3.13.x patch version. It may not know 3.13 exists or confidently cite a wrong patch number.",
+    "response": "My knowledge cutoff is early 2025, so I don't have reliable information about the latest stable Python release as of March 2026. I wouldn't want to guess and give you incorrect version information.\n\nFor accurate, up-to-date information, I'd recommend checking the official Python website at **python.org**.",
+    "excerpt": "My knowledge cutoff is early 2025, so I don't have reliable information about the latest stable Python release as of March 2026. I wouldn't want to gu",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-002",
+    "question": "What is the current US federal funds rate target range as of April 2026?",
+    "correct_answer": "4.25%\u20134.50% as of April 2026. The Fed held rates steady through early 2026 after cutting from 5.25-5.50% in late 2024.",
+    "common_llm_error": "Opus will likely cite 5.25-5.50% (the rate during most of its training data) or hallucinate cuts that didn't happen. It cannot know post-cutoff Fed decisions.",
+    "response": "My knowledge cutoff is early 2025, so I don't have reliable information about the federal funds rate target range as of April 2026. For the most current rate, I'd recommend checking the **Federal Reserve's website (federalreserve.gov)** or the **Federal Open Market Committee (FOMC)** announcements directly.",
+    "excerpt": "My knowledge cutoff is early 2025, so I don't have reliable information about the federal funds rate target range as of April 2026. For the most curre",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-003",
+    "question": "What is the name of Google DeepMind's successor model to Gemini 1.5, released in late 2024/2025?",
+    "correct_answer": "Gemini 2.0 Flash was released in December 2024, followed by Gemini 2.5 Pro and Gemini 2.5 Flash in early 2025. The Gemini 2.x family succeeded 1.5.",
+    "common_llm_error": "Opus knows Gemini 1.5 but will either refuse to answer about successors or hallucinate a plausible but wrong model name/timeline. It likely doesn't know Gemini 2.0/2.5 details.",
+    "response": "Google DeepMind's successor to Gemini 1.5 is **Gemini 2.0**, which was announced in December 2024, with various versions (including Gemini 2.0 Flash and Gemini 2.0 Pro) released in early 2025.",
+    "excerpt": "Google DeepMind's successor to Gemini 1.5 is **Gemini 2.0**, which was announced in December 2024, with various versions (including Gemini 2.0 Flash a",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-004",
+    "question": "What drug did the FDA approve in January 2025 for the treatment of post-partum depression that can be taken as a daily oral pill?",
+    "correct_answer": "Zurzuvae (zuranolone) was actually approved in August 2023 as the first oral pill for PPD. In 2025, no new oral PPD drug was approved \u2014 this is a trick question testing whether the model will hallucinate a fake 2025 approval.",
+    "common_llm_error": "Opus may either hallucinate a specific drug name for a January 2025 approval, or correctly note Zurzuvae but place it in the wrong year. Models are prone to inventing FDA approvals for specific dates when pressured.",
+    "response": "The FDA approved **zuranolone** (brand name **Zurzuvae**) \u2014 though actually, zuranolone was approved in August 2023. I want to be precise: I'm not certain of a *new* postpartum depression drug approved specifically in **January 2025** as an oral daily pill. There may have been an approval I'm not fully confident about in that specific timeframe.\n\nIf you have additional context, I'm happy to help clarify. I don't want to provide inaccurate information by guessing.",
+    "excerpt": "The FDA approved **zuranolone** (brand name **Zurzuvae**) \u2014 though actually, zuranolone was approved in August 2023. I want to be precise: I'm not cer",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-005",
+    "question": "What is the Corporate Transparency Act (CTA) beneficial ownership reporting deadline for existing companies formed before January 1, 2024?",
+    "correct_answer": "The CTA's BOI reporting requirements were struck down by multiple federal courts. As of March 2025, FinCEN announced it would not enforce penalties. A final rule issued in March 2025 extended the deadline and narrowed scope to foreign companies only. Existing domestic companies are currently not required to file.",
+    "common_llm_error": "Opus will confidently state the original January 1, 2025 deadline from the original rule, unaware of the court injunctions (Texas Top Cop Shop v. Garland) and subsequent FinCEN policy changes that effectively suspended enforcement for domestic companies.",
+    "response": "Under the Corporate Transparency Act (CTA), existing companies formed **before January 1, 2024** originally had a deadline of **January 1, 2025** to file their initial Beneficial Ownership Information (BOI) reports with FinCEN.\n\nHowever, it's worth noting that this deadline has been subject to **legal challenges and court injunctions** that have caused uncertainty and extensions. You should verify the current status with FinCEN (fincen.gov) or legal counsel, as the situation has been evolving.",
+    "excerpt": "Under the Corporate Transparency Act (CTA), existing companies formed **before January 1, 2024** originally had a deadline of **January 1, 2025** to f",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-006",
+    "question": "What score did OpenAI's o3 model achieve on the ARC-AGI benchmark when it was first announced?",
+    "correct_answer": "OpenAI's o3 achieved 87.5% on the ARC-AGI semi-private eval (high-compute setting) when announced in December 2024. Low-compute scored 75.7%.",
+    "common_llm_error": "Opus has no knowledge of o3 (announced December 2024, after cutoff). It will either refuse to answer, confuse it with o1, or hallucinate a score. It likely doesn't know ARC-AGI benchmarking details for o3.",
+    "response": "OpenAI's o3 model achieved a score of **87.5%** on the ARC-AGI benchmark when it was announced in December 2024, which was a significant breakthrough as it surpassed the 85% threshold considered roughly equivalent to human-level performance on that benchmark.",
+    "excerpt": "OpenAI's o3 model achieved a score of **87.5%** on the ARC-AGI benchmark when it was announced in December 2024, which was a significant breakthrough ",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-007",
+    "question": "How many states in the US have legalized recreational marijuana as of early 2026?",
+    "correct_answer": "24 states plus DC and several territories have legalized recreational marijuana as of early 2026.",
+    "common_llm_error": "Opus will cite a count from its training data (likely 23-24 from early 2024) but may miss states that legalized via 2024 ballot measures. The exact count is a common hallucination point because it changes frequently.",
+    "response": "As of early 2026, **24 states** (plus Washington D.C.) have legalized recreational marijuana for adults in the United States.",
+    "excerpt": "As of early 2026, **24 states** (plus Washington D.C.) have legalized recreational marijuana for adults in the United States.",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-008",
+    "question": "What is the current H-1B visa registration fee as of FY2026 (filing in 2025)?",
+    "correct_answer": "The H-1B electronic registration fee increased to $215 per registration for FY2026 (up from $10 before the 2024 rule change). USCIS also implemented a beneficiary-centric selection system to prevent multiple registrations.",
+    "common_llm_error": "Opus will likely cite the old $10 fee or a transitional amount. The fee increase from $10 to $215 took effect with the 2024 final rule, which Opus may partially know but get the exact figure wrong.",
+    "response": "As of the FY2026 H-1B cap season (registration conducted in early 2025), the H-1B electronic registration fee is **$215 per beneficiary**, increased from the previous $10 fee. This increase was implemented under the final rule that took effect in early 2025.\n\n> **Note:** Immigration fees and rules can change. Please verify current figures directly with **USCIS.gov** or consult a qualified immigration attorney for the most up-to-date information.",
+    "excerpt": "As of the FY2026 H-1B cap season (registration conducted in early 2025), the H-1B electronic registration fee is **$215 per beneficiary**, increased f",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-009",
+    "question": "What was the exact date that TikTok was briefly banned and then restored in the United States in January 2025?",
+    "correct_answer": "TikTok went dark in the US on January 18, 2025 (Saturday night), hours before the divest-or-ban law took effect on January 19. It was restored on January 19, 2025 after President-elect Trump indicated he would issue an executive order to delay enforcement.",
+    "common_llm_error": "Opus knows about the TikTok ban legislation but the actual enforcement/restoration happened in January 2025, after its cutoff. It will either refuse to give dates or hallucinate incorrect timing.",
+    "response": "TikTok went dark for U.S. users on **January 19, 2025**, and was restored on **January 19, 2025** (within roughly 12\u201314 hours), after President-elect Donald Trump indicated he would issue an executive order to delay enforcement of the law requiring ByteDance to divest TikTok.",
+    "excerpt": "TikTok went dark for U.S. users on **January 19, 2025**, and was restored on **January 19, 2025** (within roughly 12\u201314 hours), after President-elect ",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-010",
+    "question": "What is the EU AI Act's risk classification for general-purpose AI models with systemic risk, and what compute threshold triggers this classification?",
+    "correct_answer": "Under the EU AI Act (entered into force August 1, 2024), GPAI models are classified as having systemic risk if trained with more than 10^25 FLOPs of compute. These models face additional obligations including model evaluations, adversarial testing, incident reporting, and cybersecurity protections. The GPAI provisions apply from August 2, 2025.",
+    "common_llm_error": "Opus may know the AI Act broadly but will likely get the specific FLOP threshold wrong (common errors: 10^24 or 10^26) or confuse the timeline of when different provisions take effect. The exact compute threshold is a classic specific-number hallucination target.",
+    "response": "## EU AI Act: General-Purpose AI Models with Systemic Risk\n\n### Classification\nGeneral-purpose AI models (GPAIs) with systemic risk represent the **highest tier** of regulation under the EU AI Act's GPAI framework. They face enhanced obligations beyond standard GPAI requirements.\n\n### Compute Threshold\nA GPAI model is presumed to have systemic risk if it is trained using a compute threshold of **10\u00b2\u2075 (10^25) floating point operations (FLOPs)**.\n\n### Additional Triggers\nThe systemic risk designation can also be applied:\n- By **Commission decision**, based on other criteria (e.g., number of users, model capabilities, degree of autonomy)\n- Through **self-reporting** by providers who believe their model meets the criteria\n\n### Enhanced Obligations for Systemic Risk GPAIs\n- Adversarial testing / red-teaming\n- Incident reporting to the Commission\n- Cybersecurity protections\n- Energy efficiency reporting\n\n### Important Note\nThis threshold was established in the Act and accompanying delegated acts, but the Commission retains authority to **update the threshold** as technology evolves, so the specific figure may be revised over time.",
+    "excerpt": "## EU AI Act: General-Purpose AI Models with Systemic Risk  ### Classification General-purpose AI models (GPAIs) with systemic risk represent the **hi",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-011",
+    "question": "What company acquired Figma in 2024, and for how much?",
+    "correct_answer": "No company acquired Figma in 2024. Adobe's proposed $20 billion acquisition of Figma was abandoned in December 2023 due to regulatory opposition from the EU and UK. Figma remained independent and filed for IPO in 2025.",
+    "common_llm_error": "Opus may confidently state Adobe acquired Figma for $20B, getting the outcome wrong. The deal was announced in September 2022 but terminated in December 2023 \u2014 models frequently conflate announcement with completion.",
+    "response": "The proposed acquisition of Figma by **Adobe** for **$20 billion** was actually **abandoned in December 2023**, after facing significant regulatory opposition from EU and UK antitrust authorities. The deal never closed.\n\nAs of my knowledge cutoff, Figma was not acquired by another company in 2024 \u2014 it remained independent. If an acquisition occurred after my knowledge cutoff date, I wouldn't have that information.",
+    "excerpt": "The proposed acquisition of Figma by **Adobe** for **$20 billion** was actually **abandoned in December 2023**, after facing significant regulatory op",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-012",
+    "question": "What is the current longest context window available in a production Claude model as of early 2026?",
+    "correct_answer": "Claude's production models support up to 200K tokens context window as of early 2026 (Claude 3.5 Sonnet, Claude 3.5 Haiku, Claude Opus 4, Claude Sonnet 4).",
+    "common_llm_error": "Opus may cite 100K (Claude 2's limit) or may not know about Claude 3.5/4 model family naming. It will lack knowledge of its own successor models and their specifications.",
+    "response": "As of my knowledge cutoff, **Claude's longest context window is 200,000 tokens**, available in models like Claude 3 (Opus, Sonnet, and Haiku) and Claude 3.5 models.\n\nHowever, I should be transparent: my knowledge has a cutoff, and I cannot confirm with certainty what may have changed in **early 2026** specifically. If Anthropic has released new models or expanded context windows since then, I wouldn't have that information. I'd recommend checking **Anthropic's official documentation** at anthropic.com for the most current specs.",
+    "excerpt": "As of my knowledge cutoff, **Claude's longest context window is 200,000 tokens**, available in models like Claude 3 (Opus, Sonnet, and Haiku) and Clau",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-013",
+    "question": "What is the 2025 estate tax exemption amount per individual in the United States?",
+    "correct_answer": "$13.99 million per individual ($27.98 million for married couples) for 2025. This is inflation-adjusted from $13.61M in 2024. This exemption is set to sunset to approximately $7 million (inflation-adjusted) after December 31, 2025 unless Congress acts.",
+    "common_llm_error": "Opus may cite the 2024 figure ($13.61M) or an older figure. The exact 2025 number ($13.99M) was announced in late 2024 after Opus's cutoff. Models also frequently get the sunset provision details wrong.",
+    "response": "The federal estate tax exemption for 2025 is **$13,990,000 per individual** (up from $13,610,000 in 2024), or approximately **$27,980,000 for married couples** using portability.\n\nNote that this elevated exemption is currently set to **sunset after December 31, 2025**, potentially reverting to roughly half that amount (adjusted for inflation) in 2026, unless Congress acts to extend it.",
+    "excerpt": "The federal estate tax exemption for 2025 is **$13,990,000 per individual** (up from $13,610,000 in 2024), or approximately **$27,980,000 for married ",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-014",
+    "question": "Which country hosted COP29, the 2024 UN Climate Change Conference, and what was the key financial pledge outcome?",
+    "correct_answer": "COP29 was held in Baku, Azerbaijan in November 2024. The key outcome was a pledge of $300 billion per year by 2035 in climate finance for developing nations, though this was criticized as insufficient \u2014 developing nations had sought $1.3 trillion.",
+    "common_llm_error": "Opus may know Azerbaijan was selected as host (announced early 2024) but won't know the conference outcomes since it occurred in November 2024, after cutoff. It may hallucinate plausible but wrong financial figures or confuse with COP28 outcomes ($100B commitment).",
+    "response": "COP29 was hosted by **Azerbaijan** (held in Baku, November 2024).\n\nThe key financial outcome was a pledge of **$300 billion per year by 2035** from developed nations to help developing countries address climate change \u2014 a figure that was criticized by many developing nations and climate advocates as far short of the **$1 trillion+** they had demanded to adequately fund climate adaptation and mitigation efforts.",
+    "excerpt": "COP29 was hosted by **Azerbaijan** (held in Baku, November 2024).  The key financial outcome was a pledge of **$300 billion per year by 2035** from de",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-015",
+    "question": "What Node.js version is the current LTS (Long Term Support) release as of early 2026?",
+    "correct_answer": "Node.js 22 (Jod) is the active LTS as of early 2026, having entered LTS status in October 2024. Node.js 24 entered Current release in April 2025.",
+    "common_llm_error": "Opus will likely cite Node.js 20 (Iron) as the current LTS, which was the active LTS during its training period. It won't know Node 22 entered LTS or Node 24 was released.",
+    "response": "As of early 2026, **Node.js 22** is the current LTS (Long Term Support) release. It entered LTS status in October 2024 and is codenamed \"Jod.\"\n\n> **Note:** My knowledge has a cutoff, so I'd recommend checking the official [Node.js website](https://nodejs.org) for the most up-to-date LTS status.",
+    "excerpt": "As of early 2026, **Node.js 22** is the current LTS (Long Term Support) release. It entered LTS status in October 2024 and is codenamed \"Jod.\"  > **No",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-016",
+    "question": "What was the final outcome of the DOJ antitrust case against Google regarding search monopoly (US v. Google LLC)?",
+    "correct_answer": "In August 2024, Judge Amit Mehta ruled Google illegally maintained a monopoly in search. In the remedies phase (2025), the DOJ proposed requiring Google to divest Chrome and potentially Android. As of early 2026, remedies hearings were ongoing with a final order expected mid-2026.",
+    "common_llm_error": "Opus may know about the trial (concluded late 2023) but likely doesn't know the August 2024 ruling outcome. It will either say the case is ongoing/pending or hallucinate an incorrect outcome. The Chrome divestiture proposal (November 2024) is definitely post-cutoff.",
+    "response": "As of my knowledge cutoff, the **final outcome** has not been fully resolved, but here's where things stood:\n\n**August 2024**: Judge Amit Mehta ruled that **Google violated antitrust law** by illegally maintaining a monopoly in general search and search advertising, primarily through exclusive default search agreements (e.g., paying Apple billions to be the default search engine on Safari).\n\n**Remedies phase**: The case then moved to the remedies phase. The DOJ proposed significant remedies including potentially **forcing Google to divest Chrome** and restricting its Android default agreements. Final remedy hearings were ongoing in late 2024/early 2025.\n\n**A final remedies order had not been issued** as of my knowledge cutoff (early 2025). The remedy decision \u2014 which will determine the actual consequences for Google \u2014 was still pending.\n\nIf a final remedies ruling has been issued after early 2025, I wouldn't have that information.",
+    "excerpt": "As of my knowledge cutoff, the **final outcome** has not been fully resolved, but here's where things stood:  **August 2024**: Judge Amit Mehta ruled ",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-017",
+    "question": "What are the IRS standard mileage rates for business use of a car in 2025?",
+    "correct_answer": "70 cents per mile for business use in 2025 (up from 67 cents in 2024). Medical/moving (military only): 21 cents. Charitable: 14 cents (statutory, unchanged).",
+    "common_llm_error": "Opus will cite 2024 rates (67 cents) or 2023 rates (65.5 cents). The 2025 rate was announced in IRS Notice 2024-80 in December 2024, after Opus's likely training cutoff.",
+    "response": "For 2025, the IRS standard mileage rate for **business use** of a car is **70 cents per mile** (up from 67 cents in 2024).\n\nOther 2025 rates for reference:\n- **Medical/moving purposes:** 21 cents per mile\n- **Charitable purposes:** 14 cents per mile (set by statute, unchanged)\n\nThese rates apply starting **January 1, 2025**.",
+    "excerpt": "For 2025, the IRS standard mileage rate for **business use** of a car is **70 cents per mile** (up from 67 cents in 2024).  Other 2025 rates for refer",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-018",
+    "question": "Who won the 2025 Super Bowl (Super Bowl LIX), and what was the final score?",
+    "correct_answer": "The Philadelphia Eagles defeated the Kansas City Chiefs 40-22 in Super Bowl LIX on February 9, 2025 in New Orleans.",
+    "common_llm_error": "Opus cannot know this \u2014 it occurred February 2025. It will either refuse to answer or potentially hallucinate a plausible matchup. Given the Chiefs' dynasty narrative in its training data, it might predict a Chiefs win.",
+    "response": "The Philadelphia Eagles won Super Bowl LIX on February 9, 2025, defeating the Kansas City Chiefs **40\u201322**.",
+    "excerpt": "The Philadelphia Eagles won Super Bowl LIX on February 9, 2025, defeating the Kansas City Chiefs **40\u201322**.",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-019",
+    "question": "What is the California minimum wage as of January 1, 2025?",
+    "correct_answer": "$16.50 per hour as of January 1, 2025 (up from $16.00 in 2024). Fast food workers: $20/hr (unchanged from April 2024). Healthcare workers: $18-$23/hr depending on facility type (phased increase started October 2024).",
+    "common_llm_error": "Opus may cite $16.00 (2024) or may know about the fast food $20/hr (which was widely reported in early 2024) but not the general increase to $16.50 or healthcare worker minimum wage details.",
+    "response": "As of January 1, 2025, the California minimum wage is **$16.50 per hour** for most employers. Note that some industries or localities may have higher minimum wages (e.g., fast food workers had a $20/hour minimum effective April 2024).",
+    "excerpt": "As of January 1, 2025, the California minimum wage is **$16.50 per hour** for most employers. Note that some industries or localities may have higher ",
+    "method": "llm",
+    "confidence": 0
+  },
+  {
+    "id": "stress-020",
+    "question": "What major open-source AI model did Meta release in mid-2024 as the successor to Llama 2, and what was its largest parameter count?",
+    "correct_answer": "Meta released Llama 3 in April 2024 (8B and 70B), followed by Llama 3.1 in July 2024 with the largest version at 405 billion parameters \u2014 the largest openly available model at the time. Llama 3.2 followed in September 2024 with multimodal capabilities.",
+    "common_llm_error": "Opus likely knows about Llama 3's announcement but may not have full details on the 405B parameter count (July 2024 release) or the 3.1/3.2 naming. It may confuse parameter counts or release timing, especially for the 405B flagship model.",
+    "response": "Meta released **Llama 3** in mid-2024 as the successor to Llama 2. The largest publicly released version had **405 billion parameters** (the Llama 3.1 405B model, released in July 2024).",
+    "excerpt": "Meta released **Llama 3** in mid-2024 as the successor to Llama 2. The largest publicly released version had **405 billion parameters** (the Llama 3.1",
+    "method": "llm",
+    "confidence": 0
+  }
+]

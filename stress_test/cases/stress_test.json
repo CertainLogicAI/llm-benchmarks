@@ -1,0 +1,222 @@
+[
+  {
+    "id": "stress-001",
+    "category": "stress_test",
+    "question": "What version of Python was the latest stable release as of March 2026?",
+    "correct_answer": "Python 3.14.0a6 (alpha) was the latest pre-release, while Python 3.13.3 was the latest stable release as of March 2026. Python 3.13 was released October 2024.",
+    "common_llm_error": "Opus will likely state Python 3.12.x as latest stable (its cutoff knowledge) or hallucinate a specific 3.13.x patch version. It may not know 3.13 exists or confidently cite a wrong patch number.",
+    "ground_truth_source": "python.org/downloads; PEP 719 (Python 3.13 release schedule)",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["python", "software-version", "post-cutoff", "tech"]
+  },
+  {
+    "id": "stress-002",
+    "category": "stress_test",
+    "question": "What is the current US federal funds rate target range as of April 2026?",
+    "correct_answer": "4.25%–4.50% as of April 2026. The Fed held rates steady through early 2026 after cutting from 5.25-5.50% in late 2024.",
+    "common_llm_error": "Opus will likely cite 5.25-5.50% (the rate during most of its training data) or hallucinate cuts that didn't happen. It cannot know post-cutoff Fed decisions.",
+    "ground_truth_source": "Federal Reserve FOMC statements; federalreserve.gov",
+    "severity": "high",
+    "last_verified": "2026-04-18",
+    "tags": ["federal-reserve", "interest-rates", "financial", "post-cutoff"]
+  },
+  {
+    "id": "stress-003",
+    "category": "stress_test",
+    "question": "What is the name of Google DeepMind's successor model to Gemini 1.5, released in late 2024/2025?",
+    "correct_answer": "Gemini 2.0 Flash was released in December 2024, followed by Gemini 2.5 Pro and Gemini 2.5 Flash in early 2025. The Gemini 2.x family succeeded 1.5.",
+    "common_llm_error": "Opus knows Gemini 1.5 but will either refuse to answer about successors or hallucinate a plausible but wrong model name/timeline. It likely doesn't know Gemini 2.0/2.5 details.",
+    "ground_truth_source": "Google DeepMind blog; Google AI announcements",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["google", "gemini", "AI-models", "post-cutoff"]
+  },
+  {
+    "id": "stress-004",
+    "category": "stress_test",
+    "question": "What drug did the FDA approve in January 2025 for the treatment of post-partum depression that can be taken as a daily oral pill?",
+    "correct_answer": "Zurzuvae (zuranolone) was actually approved in August 2023 as the first oral pill for PPD. In 2025, no new oral PPD drug was approved — this is a trick question testing whether the model will hallucinate a fake 2025 approval.",
+    "common_llm_error": "Opus may either hallucinate a specific drug name for a January 2025 approval, or correctly note Zurzuvae but place it in the wrong year. Models are prone to inventing FDA approvals for specific dates when pressured.",
+    "ground_truth_source": "FDA.gov drug approval database; FDA press release on Zurzuvae (Aug 4, 2023)",
+    "severity": "high",
+    "last_verified": "2026-04-18",
+    "tags": ["FDA", "pharmaceutical", "hallucination-trap", "medical"]
+  },
+  {
+    "id": "stress-005",
+    "category": "stress_test",
+    "question": "What is the Corporate Transparency Act (CTA) beneficial ownership reporting deadline for existing companies formed before January 1, 2024?",
+    "correct_answer": "The CTA's BOI reporting requirements were struck down by multiple federal courts. As of March 2025, FinCEN announced it would not enforce penalties. A final rule issued in March 2025 extended the deadline and narrowed scope to foreign companies only. Existing domestic companies are currently not required to file.",
+    "common_llm_error": "Opus will confidently state the original January 1, 2025 deadline from the original rule, unaware of the court injunctions (Texas Top Cop Shop v. Garland) and subsequent FinCEN policy changes that effectively suspended enforcement for domestic companies.",
+    "ground_truth_source": "FinCEN.gov notices; Texas Top Cop Shop v. Garland (5th Circuit); FinCEN interim final rule March 2025",
+    "severity": "high",
+    "last_verified": "2026-04-18",
+    "tags": ["CTA", "FinCEN", "beneficial-ownership", "legal", "regulatory-change"]
+  },
+  {
+    "id": "stress-006",
+    "category": "stress_test",
+    "question": "What score did OpenAI's o3 model achieve on the ARC-AGI benchmark when it was first announced?",
+    "correct_answer": "OpenAI's o3 achieved 87.5% on the ARC-AGI semi-private eval (high-compute setting) when announced in December 2024. Low-compute scored 75.7%.",
+    "common_llm_error": "Opus has no knowledge of o3 (announced December 2024, after cutoff). It will either refuse to answer, confuse it with o1, or hallucinate a score. It likely doesn't know ARC-AGI benchmarking details for o3.",
+    "ground_truth_source": "ARC Prize announcement December 2024; François Chollet's posts; OpenAI announcement",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["openai", "o3", "ARC-AGI", "AI-benchmarks", "post-cutoff"]
+  },
+  {
+    "id": "stress-007",
+    "category": "stress_test",
+    "question": "How many states in the US have legalized recreational marijuana as of early 2026?",
+    "correct_answer": "24 states plus DC and several territories have legalized recreational marijuana as of early 2026.",
+    "common_llm_error": "Opus will cite a count from its training data (likely 23-24 from early 2024) but may miss states that legalized via 2024 ballot measures. The exact count is a common hallucination point because it changes frequently.",
+    "ground_truth_source": "NORML.org state laws map; individual state legislation records",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["marijuana", "state-law", "legal", "frequently-changing"]
+  },
+  {
+    "id": "stress-008",
+    "category": "stress_test",
+    "question": "What is the current H-1B visa registration fee as of FY2026 (filing in 2025)?",
+    "correct_answer": "The H-1B electronic registration fee increased to $215 per registration for FY2026 (up from $10 before the 2024 rule change). USCIS also implemented a beneficiary-centric selection system to prevent multiple registrations.",
+    "common_llm_error": "Opus will likely cite the old $10 fee or a transitional amount. The fee increase from $10 to $215 took effect with the 2024 final rule, which Opus may partially know but get the exact figure wrong.",
+    "ground_truth_source": "USCIS Final Rule 'Modernizing H-1B Program' (Dec 2024); 8 CFR 214.2(h)",
+    "severity": "high",
+    "last_verified": "2026-04-18",
+    "tags": ["H-1B", "immigration", "USCIS", "regulatory", "specific-numbers"]
+  },
+  {
+    "id": "stress-009",
+    "category": "stress_test",
+    "question": "What was the exact date that TikTok was briefly banned and then restored in the United States in January 2025?",
+    "correct_answer": "TikTok went dark in the US on January 18, 2025 (Saturday night), hours before the divest-or-ban law took effect on January 19. It was restored on January 19, 2025 after President-elect Trump indicated he would issue an executive order to delay enforcement.",
+    "common_llm_error": "Opus knows about the TikTok ban legislation but the actual enforcement/restoration happened in January 2025, after its cutoff. It will either refuse to give dates or hallucinate incorrect timing.",
+    "ground_truth_source": "NYT, Reuters, AP reporting January 18-19, 2025; Executive Order on TikTok January 20, 2025",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["TikTok", "ban", "tech-policy", "exact-dates", "post-cutoff"]
+  },
+  {
+    "id": "stress-010",
+    "category": "stress_test",
+    "question": "What is the EU AI Act's risk classification for general-purpose AI models with systemic risk, and what compute threshold triggers this classification?",
+    "correct_answer": "Under the EU AI Act (entered into force August 1, 2024), GPAI models are classified as having systemic risk if trained with more than 10^25 FLOPs of compute. These models face additional obligations including model evaluations, adversarial testing, incident reporting, and cybersecurity protections. The GPAI provisions apply from August 2, 2025.",
+    "common_llm_error": "Opus may know the AI Act broadly but will likely get the specific FLOP threshold wrong (common errors: 10^24 or 10^26) or confuse the timeline of when different provisions take effect. The exact compute threshold is a classic specific-number hallucination target.",
+    "ground_truth_source": "EU AI Act (Regulation 2024/1689), Article 51; European Commission GPAI Code of Practice",
+    "severity": "high",
+    "last_verified": "2026-04-18",
+    "tags": ["EU-AI-Act", "regulation", "compute-threshold", "specific-numbers", "AI-governance"]
+  },
+  {
+    "id": "stress-011",
+    "category": "stress_test",
+    "question": "What company acquired Figma in 2024, and for how much?",
+    "correct_answer": "No company acquired Figma in 2024. Adobe's proposed $20 billion acquisition of Figma was abandoned in December 2023 due to regulatory opposition from the EU and UK. Figma remained independent and filed for IPO in 2025.",
+    "common_llm_error": "Opus may confidently state Adobe acquired Figma for $20B, getting the outcome wrong. The deal was announced in September 2022 but terminated in December 2023 — models frequently conflate announcement with completion.",
+    "ground_truth_source": "Adobe/Figma joint press release December 18, 2023; SEC filings",
+    "severity": "high",
+    "last_verified": "2026-04-18",
+    "tags": ["Figma", "Adobe", "M&A", "hallucination-trap", "tech"]
+  },
+  {
+    "id": "stress-012",
+    "category": "stress_test",
+    "question": "What is the current longest context window available in a production Claude model as of early 2026?",
+    "correct_answer": "Claude's production models support up to 200K tokens context window as of early 2026 (Claude 3.5 Sonnet, Claude 3.5 Haiku, Claude Opus 4, Claude Sonnet 4).",
+    "common_llm_error": "Opus may cite 100K (Claude 2's limit) or may not know about Claude 3.5/4 model family naming. It will lack knowledge of its own successor models and their specifications.",
+    "ground_truth_source": "Anthropic documentation; docs.anthropic.com/en/docs/about-claude/models",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["anthropic", "claude", "context-window", "self-knowledge", "AI-models"]
+  },
+  {
+    "id": "stress-013",
+    "category": "stress_test",
+    "question": "What is the 2025 estate tax exemption amount per individual in the United States?",
+    "correct_answer": "$13.99 million per individual ($27.98 million for married couples) for 2025. This is inflation-adjusted from $13.61M in 2024. This exemption is set to sunset to approximately $7 million (inflation-adjusted) after December 31, 2025 unless Congress acts.",
+    "common_llm_error": "Opus may cite the 2024 figure ($13.61M) or an older figure. The exact 2025 number ($13.99M) was announced in late 2024 after Opus's cutoff. Models also frequently get the sunset provision details wrong.",
+    "ground_truth_source": "IRS Revenue Procedure 2024-40; IRC Section 2010(c)",
+    "severity": "high",
+    "last_verified": "2026-04-18",
+    "tags": ["estate-tax", "IRS", "tax-exemption", "2025", "specific-numbers"]
+  },
+  {
+    "id": "stress-014",
+    "category": "stress_test",
+    "question": "Which country hosted COP29, the 2024 UN Climate Change Conference, and what was the key financial pledge outcome?",
+    "correct_answer": "COP29 was held in Baku, Azerbaijan in November 2024. The key outcome was a pledge of $300 billion per year by 2035 in climate finance for developing nations, though this was criticized as insufficient — developing nations had sought $1.3 trillion.",
+    "common_llm_error": "Opus may know Azerbaijan was selected as host (announced early 2024) but won't know the conference outcomes since it occurred in November 2024, after cutoff. It may hallucinate plausible but wrong financial figures or confuse with COP28 outcomes ($100B commitment).",
+    "ground_truth_source": "UNFCCC COP29 final decision texts; Reuters/AP November 2024 reporting",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["COP29", "climate", "international", "post-cutoff", "specific-numbers"]
+  },
+  {
+    "id": "stress-015",
+    "category": "stress_test",
+    "question": "What Node.js version is the current LTS (Long Term Support) release as of early 2026?",
+    "correct_answer": "Node.js 22 (Jod) is the active LTS as of early 2026, having entered LTS status in October 2024. Node.js 24 entered Current release in April 2025.",
+    "common_llm_error": "Opus will likely cite Node.js 20 (Iron) as the current LTS, which was the active LTS during its training period. It won't know Node 22 entered LTS or Node 24 was released.",
+    "ground_truth_source": "nodejs.org/en/about/previous-releases; Node.js release schedule",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["nodejs", "LTS", "software-version", "tech", "post-cutoff"]
+  },
+  {
+    "id": "stress-016",
+    "category": "stress_test",
+    "question": "What was the final outcome of the DOJ antitrust case against Google regarding search monopoly (US v. Google LLC)?",
+    "correct_answer": "In August 2024, Judge Amit Mehta ruled Google illegally maintained a monopoly in search. In the remedies phase (2025), the DOJ proposed requiring Google to divest Chrome and potentially Android. As of early 2026, remedies hearings were ongoing with a final order expected mid-2026.",
+    "common_llm_error": "Opus may know about the trial (concluded late 2023) but likely doesn't know the August 2024 ruling outcome. It will either say the case is ongoing/pending or hallucinate an incorrect outcome. The Chrome divestiture proposal (November 2024) is definitely post-cutoff.",
+    "ground_truth_source": "US v. Google LLC, Case No. 1:20-cv-03010 (D.D.C.); DOJ proposed remedies filing November 2024",
+    "severity": "high",
+    "last_verified": "2026-04-18",
+    "tags": ["antitrust", "Google", "DOJ", "legal", "post-cutoff"]
+  },
+  {
+    "id": "stress-017",
+    "category": "stress_test",
+    "question": "What are the IRS standard mileage rates for business use of a car in 2025?",
+    "correct_answer": "70 cents per mile for business use in 2025 (up from 67 cents in 2024). Medical/moving (military only): 21 cents. Charitable: 14 cents (statutory, unchanged).",
+    "common_llm_error": "Opus will cite 2024 rates (67 cents) or 2023 rates (65.5 cents). The 2025 rate was announced in IRS Notice 2024-80 in December 2024, after Opus's likely training cutoff.",
+    "ground_truth_source": "IRS Notice 2024-80; IRS.gov standard mileage rates page",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["IRS", "mileage-rate", "2025", "specific-numbers", "tax"]
+  },
+  {
+    "id": "stress-018",
+    "category": "stress_test",
+    "question": "Who won the 2025 Super Bowl (Super Bowl LIX), and what was the final score?",
+    "correct_answer": "The Philadelphia Eagles defeated the Kansas City Chiefs 40-22 in Super Bowl LIX on February 9, 2025 in New Orleans.",
+    "common_llm_error": "Opus cannot know this — it occurred February 2025. It will either refuse to answer or potentially hallucinate a plausible matchup. Given the Chiefs' dynasty narrative in its training data, it might predict a Chiefs win.",
+    "ground_truth_source": "NFL.com; AP/Reuters game reporting February 9, 2025",
+    "severity": "low",
+    "last_verified": "2026-04-18",
+    "tags": ["Super-Bowl", "NFL", "sports", "post-cutoff", "exact-dates"]
+  },
+  {
+    "id": "stress-019",
+    "category": "stress_test",
+    "question": "What is the California minimum wage as of January 1, 2025?",
+    "correct_answer": "$16.50 per hour as of January 1, 2025 (up from $16.00 in 2024). Fast food workers: $20/hr (unchanged from April 2024). Healthcare workers: $18-$23/hr depending on facility type (phased increase started October 2024).",
+    "common_llm_error": "Opus may cite $16.00 (2024) or may know about the fast food $20/hr (which was widely reported in early 2024) but not the general increase to $16.50 or healthcare worker minimum wage details.",
+    "ground_truth_source": "California DIR; SB 525 (healthcare); AB 1228 (fast food); Labor Code Section 1182.12",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["minimum-wage", "California", "labor-law", "2025", "specific-numbers"]
+  },
+  {
+    "id": "stress-020",
+    "category": "stress_test",
+    "question": "What major open-source AI model did Meta release in mid-2024 as the successor to Llama 2, and what was its largest parameter count?",
+    "correct_answer": "Meta released Llama 3 in April 2024 (8B and 70B), followed by Llama 3.1 in July 2024 with the largest version at 405 billion parameters — the largest openly available model at the time. Llama 3.2 followed in September 2024 with multimodal capabilities.",
+    "common_llm_error": "Opus likely knows about Llama 3's announcement but may not have full details on the 405B parameter count (July 2024 release) or the 3.1/3.2 naming. It may confuse parameter counts or release timing, especially for the 405B flagship model.",
+    "ground_truth_source": "Meta AI blog; Llama 3.1 model card; ai.meta.com/llama",
+    "severity": "medium",
+    "last_verified": "2026-04-18",
+    "tags": ["Meta", "Llama", "open-source", "AI-models", "parameter-count"]
+  }
+]

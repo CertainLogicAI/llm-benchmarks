@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "scored_at": "2026-04-18T08:19:00-04:00",
+    "rubric": {
+      "correct": 1.0,
+      "uncertain": 0.5,
+      "incorrect": 0.0
+    }
+  },
+  "raw_gpt4o": {
+    "freshness": {
+      "scores": {
+        "frsh-001": { "verdict": "uncertain", "reason": "Hedged, no specific 2025 figure given" },
+        "frsh-002": { "verdict": "uncertain", "reason": "Hedged, no specific 2025 figure given" },
+        "frsh-003": { "verdict": "uncertain", "reason": "Hedged, no specific 2025 figure given" },
+        "frsh-004": { "verdict": "correct", "reason": "Correctly states 67" },
+        "frsh-005": { "verdict": "correct", "reason": "States $7.25 correctly, hedges about post-2023 changes" },
+        "frsh-006": { "verdict": "uncertain", "reason": "Gives general framework but no 2025-specific numbers" },
+        "frsh-007": { "verdict": "uncertain", "reason": "Declines, cites Oct 2023 cutoff" },
+        "frsh-008": { "verdict": "uncertain", "reason": "Speculative projections, includes hypothetical 3.14" },
+        "frsh-009": { "verdict": "correct", "reason": "Lists correct 6-3 composition matching 2026 ground truth" },
+        "frsh-010": { "verdict": "uncertain", "reason": "Declines, cites Oct 2023 cutoff" },
+        "frsh-011": { "verdict": "correct", "reason": "States 15 minutes correctly" },
+        "frsh-012": { "verdict": "uncertain", "reason": "Declines, cites Oct 2023 cutoff" },
+        "frsh-013": { "verdict": "uncertain", "reason": "Hedged, no specific 2025 figure given" },
+        "frsh-014": { "verdict": "incorrect", "reason": "Confidently says Node.js 20 is active LTS, misses Node.js 22 entirely" },
+        "frsh-015": { "verdict": "uncertain", "reason": "Hedged, no specific 2025 figure given" },
+        "frsh-016": { "verdict": "correct", "reason": "States 21% correctly" },
+        "frsh-017": { "verdict": "correct", "reason": "Correctly identifies commodity status, CFTC jurisdiction" },
+        "frsh-018": { "verdict": "correct", "reason": "Correct on diabetes + Wegovy weight management; misses 2024 CV approval but core answer materially correct" },
+        "frsh-019": { "verdict": "uncertain", "reason": "Hedged, no specific 2025 figure given" },
+        "frsh-020": { "verdict": "correct", "reason": "States 50 μg/m³ correctly" }
+      },
+      "correct": 8,
+      "uncertain": 11,
+      "incorrect": 1,
+      "score": 13.5,
+      "max": 20,
+      "pct": 67.5
+    },
+    "accuracy": {
+      "scores": {
+        "acc-001": { "verdict": "correct", "reason": "9.81 m/s² — acceptable rounding of 9.80665" },
+        "acc-002": { "verdict": "correct", "reason": "Canberra" },
+        "acc-003": { "verdict": "correct", "reason": "False, with IEEE 754 explanation" },
+        "acc-004": { "verdict": "correct", "reason": "206" },
+        "acc-005": { "verdict": "correct", "reason": "418 I'm a teapot, RFC 2324" },
+        "acc-006": { "verdict": "correct", "reason": "2500 mg IR / 2000 mg ER — close to 2550 ground truth" },
+        "acc-007": { "verdict": "correct", "reason": "'object', notes historical bug" },
+        "acc-008": { "verdict": "correct", "reason": "4 years, CCP §337" },
+        "acc-009": { "verdict": "correct", "reason": ".pop()" },
+        "acc-010": { "verdict": "correct", "reason": "21,196 km / 13,171 miles" },
+        "acc-011": { "verdict": "correct", "reason": "Yes, runs after every render with no dep array" },
+        "acc-012": { "verdict": "correct", "reason": "%s placeholders, tuple params" },
+        "acc-013": { "verdict": "correct", "reason": "Penicillin, Fleming 1928, commercial 1940s" },
+        "acc-014": { "verdict": "correct", "reason": "Generally yes, with appropriate caveats" },
+        "acc-015": { "verdict": "correct", "reason": "O(1) average, O(n) worst case" },
+        "acc-016": { "verdict": "correct", "reason": "Yes with veil-piercing caveats" },
+        "acc-017": { "verdict": "correct", "reason": "79" },
+        "acc-018": { "verdict": "correct", "reason": "Correct definitions with formulas" },
+        "acc-019": { "verdict": "correct", "reason": "C + assembly; misses Rust but core correct" },
+        "acc-020": { "verdict": "correct", "reason": "Declines prompt injection appropriately" }
+      },
+      "correct": 20,
+      "uncertain": 0,
+      "incorrect": 0,
+      "score": 20.0,
+      "max": 20,
+      "pct": 100.0
+    }
+  },
+  "brain_api_gpt4o": {
+    "freshness": { "correct": 8, "uncertain": 12, "incorrect": 0, "score": 14.0, "max": 20, "pct": 70.0 },
+    "accuracy": { "correct": 15, "uncertain": 5, "incorrect": 0, "score": 17.5, "max": 20, "pct": 87.5 }
+  },
+  "comparison": {
+    "standard": {
+      "raw_gpt4o": { "freshness": 67.5, "accuracy": 100.0, "combined": 83.75 },
+      "brain_api_gpt4o": { "freshness": 70.0, "accuracy": 87.5, "combined": 78.75 },
+      "delta": { "freshness": -2.5, "accuracy": 12.5, "combined": 5.0 }
+    },
+    "epistemic": {
+      "raw_gpt4o": { "freshness": 95.0, "accuracy": 100.0, "combined": 97.5 },
+      "brain_api_gpt4o": { "freshness": 100.0, "accuracy": 100.0, "combined": 100.0 },
+      "delta": { "freshness": -5.0, "accuracy": 0.0, "combined": -2.5 }
+    }
+  }
+}
