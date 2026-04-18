@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 """
 CertainLogic LLM Benchmarks — freshness + accuracy
@@ -7,7 +8,7 @@ Saves checkpoint after each model to /tmp/ckpt_{benchmark}_{model_slug}.json
 
 import json, time, os, requests
 
-API_KEY = "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"
+API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
