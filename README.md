@@ -1,8 +1,19 @@
 # LLM Accuracy and Freshness Benchmark
 
+> ⚠️ **STATUS: WITHDRAWN — INADEQUATE METHODOLOGY**
+>
+> The CertainLogic Brain API results presented in this benchmark (reported as improving Llama by "+40 percentage points on freshness," achieving 100% on epistemic scoring) were produced using a proprietary system with scoring frameworks designed to favor that system's outputs. The benchmark methodology failed to adequately disclose:
+> - That the Brain API degraded accuracy on established facts (100% → 87.5% vs. raw GPT-4o)
+> - That "epistemic scoring" (uncertain=1.0) was designed to reward hedging rather than correctness
+> - That the Brain API could not be independently tested or verified by third parties
+>
+> **These results should not be cited as evidence of CertainLogic product performance.** The bare-LLM results (GPT-4o, Claude, Llama) may be independently reproducible. The CertainLogic results are not.
+>
+> This repo is retained for transparency. No further updates.
+
 **Published:** April 18, 2026  
 **Authors:** CertainLogic Research Team  
-**Paper:** [paper1-benchmark-study-final.md](../docs/paper1-benchmark-study-final.md)
+**Paper:** [paper1-benchmark-study-final.md](../docs/paper1-benchmark-study-final.md) *(withdrawn)*
 
 ## Overview
 
