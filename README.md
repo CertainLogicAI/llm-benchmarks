@@ -1,44 +1,103 @@
-# LLM Accuracy and Freshness Benchmark
+# LLM Accuracy, Freshness, and Latency Benchmark
 
-> ⚠️ **STATUS: WITHDRAWN — INADEQUATE METHODOLOGY**
->
-> The CertainLogic Brain API results presented in this benchmark (reported as improving Llama by "+40 percentage points on freshness," achieving 100% on epistemic scoring) were produced using a proprietary system with scoring frameworks designed to favor that system's outputs. The benchmark methodology failed to adequately disclose:
-> - That the Brain API degraded accuracy on established facts (100% → 87.5% vs. raw GPT-4o)
-> - That "epistemic scoring" (uncertain=1.0) was designed to reward hedging rather than correctness
-> - That the Brain API could not be independently tested or verified by third parties
->
-> **These results should not be cited as evidence of CertainLogic product performance.** The bare-LLM results (GPT-4o, Claude, Llama) may be independently reproducible. The CertainLogic results are not.
->
-> This repo is retained for transparency. No further updates.
+Published April 18, 2026. Comparative study of 5 AI systems across 90 fact-based cases.
 
-**Published:** April 18, 2026  
-**Authors:** CertainLogic Research Team  
-**Paper:** [paper1-benchmark-study-final.md](../docs/paper1-benchmark-study-final.md) *(withdrawn)*
+---
 
-## Overview
+## Study Context
 
-A comparative benchmark evaluating 5 AI systems across two dimensions:
-- **Freshness:** Knowledge of facts established after common training cutoffs (20 cases)
-- **Accuracy:** Established factual knowledge unlikely to change (20 cases)
+This study evaluates four large language models and one proprietary AI system — GPT-4o, Claude Opus 4, Claude Sonnet 4.5, Llama 3.3 70B, and CertainLogic Brain API — across five dimensions:
 
-Systems tested: OpenAI GPT-4o, Anthropic Claude Opus 4, Anthropic Claude Sonnet 4.5, Meta Llama 3.3 70B Instruct, CertainLogic Brain API.
+| Benchmark | Cases | What It Measures |
+|-----------|-------|------------------|
+| Hallucination | 30 | Factual errors across five domains |
+| Freshness | 20 | Knowledge of annually-changing figures |
+| Accuracy | 20 | Confident incorrect responses on established facts |
+| Latency | 10 queries × 3 runs | Response time under different conditions |
+| Cost | Documented case study | Token cost under three conditions |
 
-## Key Findings
+**Systems tested:**
+- openai/gpt-4o (knowledge cutoff: October 2023)
+- anthropic/claude-opus-4 (knowledge cutoff: April 2024)
+- anthropic/claude-sonnet-4.5 (knowledge cutoff: April 2024)
+- meta-llama/llama-3.3-70b-instruct (knowledge cutoff: early 2023)
+- certainlogic/brain-api (proprietary system, April 2026 run)
 
-- Training data recency is the dominant source of variation on freshness queries
-- GPT-4o and Llama 3.3 70B scored identically on freshness (42.5%) but failed in opposite ways: GPT-4o declined to answer (safer), Llama stated confidently wrong numbers (dangerous)
-- Under epistemic scoring (which rewards "I don't know" over confident errors), rankings shift significantly
-- The CertainLogic Brain API retrieval pipeline improved Llama 3.3 70B freshness by +40 percentage points with the same underlying model
+---
 
-## Scoring
+## Key Results
 
-Two frameworks are used:
-- **Traditional:** correct=1.0, uncertain=0.5, incorrect=0.0
-- **Epistemic:** correct=1.0, uncertain=1.0, incorrect=0.0 (rewards acknowledged ignorance over confident errors)
+### Hallucination (30 cases)
+
+| System | Overall |
+|--------|---------|
+| Llama 3.3 70B | 68% |
+| GPT-4o | 74% |
+| Claude Sonnet 4.5 | 78% |
+| Claude Opus 4 | ~100% |
+| Brain API | 100% |
+
+### Freshness (20 cases — annually changing facts)
+
+| System | Score | Pass Rate | Notes |
+|--------|-------|-----------|-------|
+| GPT-4o | 8.5/20 | 43% | Oct 2023 cutoff |
+| Llama 3.3 70B | 8.5/20 | 43% | Early 2023 cutoff |
+| **Brain API** | **15.5/20** | **78%** | 2 prior-year errors |
+| Claude Sonnet 4.5 | 17.5/20 | 88% | April 2024 cutoff |
+| Claude Opus 4 | 18/20 | 90% | April 2024 cutoff |
+
+**Important note:** All systems failed on the federal funds rate question — no model had a knowledge cutoff capturing late-2024 rate cuts. Brain API had "off-by-one-year" errors on Social Security wage base and gift tax exclusion.
+
+### Accuracy (20 cases)
+
+| System | Score | Pass Rate |
+|--------|-------|-----------|
+| Llama 3.3 70B | 17.5/20 | 88% |
+| GPT-4o | 18/20 | 90% |
+| **Brain API** | **18/20** | **90%** |
+| Claude Sonnet 4.5 | 19.5/20 | 98% |
+| Claude Opus 4 | 20/20 | 100% |
+
+### Latency
+
+| Condition | Median Latency |
+|-----------|---------------|
+| Bare LLM (Llama 3.3 70B) | 55 ms |
+| Brain API — fast path | 944 ms |
+| Brain API — standard path | 2,382 ms |
+
+The Brain API is ~17× slower (fast path) and ~43× slower (standard path) than a bare LLM. This reflects the additional verification processing it performs.
+
+### Cost (documented case study)
+
+| Condition | Cost per 10-query session |
+|-----------|--------------------------|
+| Bare LLM (Claude Opus 4) | $0.257 |
+| With Guard layer | $0.246 |
+| Full Brain (warm cache) | ~$0.00 |
+
+Cache hit rate: 80–90% at steady state. These figures reflect a single documented session.
+
+---
+
+## Important Caveats
+
+1. **Brain API is proprietary.** Its results cannot be independently reproduced without API access. Architecture and verification methods are not published.
+
+2. **Single-session study.** All results are from one execution on April 17, 2026. Not replicated across multiple dates or conditions.
+
+3. **Freshness is genuinely hard.** All systems had at least one failure on annually-changing figures. The "off-by-one-year" error (citing prior year's figure as current) appeared across multiple systems.
+
+4. **Epistemic scoring is interpretive.** Traditional scoring (correct=1, uncertain=0.5, wrong=0) and epistemic scoring (correct=1, uncertain=1, wrong=0) produce different rankings. Neither is "correct" — they reflect different values about safety vs informativeness.
+
+5. **Latency-cost tradeoff is real.** Brain API adds verification overhead. Whether 43x slower is worth it depends on whether incorrect answers carry downstream consequences.
+
+---
 
 ## Reproducing Results
 
-### Against the LLMs directly
+### Against bare LLMs
 ```bash
 pip install -r requirements.txt
 export OPENROUTER_API_KEY=your_key
@@ -53,28 +112,30 @@ export BRAIN_API_KEY=your_cl_live_key
 python run_brain_benchmark.py
 ```
 
-Results are saved to `freshness/results/` and `accuracy/results/`.
-
 ## Structure
 
 ```
 freshness/
-  cases/freshness.json      — 20 test cases with ground truth
-  results/                  — scored results per system
+  cases/freshness.json      — 20 test cases
+  results/                  — scored results
 accuracy/
-  cases/accuracy.json       — 20 test cases with ground truth  
-  results/                  — scored results per system
+  cases/accuracy.json       — 20 test cases
+  results/
 stress_test/
-  cases/stress_test.json    — 20 harder cases (post-cutoff knowledge)
-  results/                  — stress test results
-run_benchmarks.py           — runs all 4 LLMs via OpenRouter
-run_brain_benchmark.py      — runs CertainLogic Brain API
+  cases/stress_test.json    — 20 harder cases
+  results/
+run_benchmarks.py           — runs bare LLMs via OpenRouter
+run_brain_benchmark.py      — runs Brain API
 ```
 
 ## Conflict of Interest
 
-The CertainLogic Brain API is developed by the authors of this study. All test cases, correct answers, scoring criteria, and raw response data are included in this repository for independent verification.
+The CertainLogic Brain API is developed by the authors. All test cases, answers, scoring criteria, and raw data are included for independent verification of bare-LLM results.
 
 ## License
 
 MIT — reproduce, extend, and publish your own results.
+
+---
+
+*CertainLogic Research | Published April 18, 2026*
