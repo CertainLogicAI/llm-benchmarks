@@ -134,7 +134,7 @@ The CertainLogic Brain API is developed by the authors. All test cases, answers,
 
 ## License
 
-MIT — reproduce, extend, and publish your own results.
+Business Source License 1.1 (BSL 1.1) — broad grant. See LICENSE.
 
 ---
 
