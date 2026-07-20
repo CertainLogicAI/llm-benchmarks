@@ -105,7 +105,7 @@ python run_benchmarks.py
 ```
 
 ### Against CertainLogic Brain API
-Get a free API key at https://api.certainlogic.ai/signup
+Get a free API key at https://certainlogic.ai
 
 ```bash
 export BRAIN_API_KEY=your_cl_live_key
