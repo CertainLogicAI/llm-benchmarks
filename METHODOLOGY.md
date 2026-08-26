@@ -42,7 +42,7 @@ Some cases have exact correct answers (e.g., "$250,000 per depositor per bank").
 
 ## Independence Statement
 
-**We built CertainLogic Brain, the system that scores 100% on these benchmarks. Here's why you should still trust the results.**
+**We built CertainLogic Brain, the system that scores 100% on these benchmarks (internal run — Brain API is proprietary and not independently verifiable). Here's why you should still trust the results.**
 
 The obvious concern: if we built the benchmark and we built the system, we could have tuned the system against the specific test cases. That's a real conflict of interest, and we're not going to pretend it isn't.
 

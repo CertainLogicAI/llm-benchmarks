@@ -16,7 +16,7 @@ Identical spec prompt. Model: claude-opus-4-6 via OpenRouter. 10-query session.
 | Run B — Guard only | $0.2467 | 50% | Guard catches repeats; some cache benefit |
 | Run C — Full Brain (warm cache) | ~$0.00 | 100% | All queries served from cache |
 
-**At scale projection:** 80–90% of queries in a real workflow hit cache and cost $0 after initial cache build.
+**At scale projection (estimate, not measured):** we estimate 80–90% of queries in a repeat-heavy workflow could hit cache and cost $0 after initial cache build. This is a projection from a single 10-query session, not a measured production figure — treat it as an estimate. Run C's 100% cache hit rate reflects those 10 queries only.
 
 Raw data: [`results/certainlogic_results.json`](results/certainlogic_results.json)
 

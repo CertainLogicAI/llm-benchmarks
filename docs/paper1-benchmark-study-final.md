@@ -4,6 +4,8 @@
 **Date:** April 18, 2026
 **Version:** Final
 
+> **Conflict of interest & verifiability:** This study was designed and executed by CertainLogic. The Brain API is a proprietary system; all Brain API results within are from internal runs and are **not independently verifiable**. Bare-LLM results (Opus 4, GPT-4o) are reproducible via the published scripts.
+
 ---
 
 ## Conflict of Interest Disclosure

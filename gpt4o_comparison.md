@@ -2,6 +2,8 @@
 
 **Scored:** 2026-04-18
 
+> **Notice:** Brain API is a proprietary system; its results here are from an internal run and are **not independently verifiable**. Raw GPT-4o results are reproducible via the published scripts. See the main README's conflict-of-interest note.
+
 ## Rubric
 | Verdict | Score | Definition |
 |---------|-------|------------|

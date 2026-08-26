@@ -1,5 +1,7 @@
 # Phase 2: Brain API + Opus vs Raw Opus — Stress Test Comparison
 
+> **Notice:** Brain API is a proprietary system; its results in this document are from an internal run and are **not independently verifiable**. Raw Opus results are reproducible via the published scripts. See the main README's conflict-of-interest note.
+
 ## Scoring Rubric
 - **correct (1.0):** materially correct answer verified against ground truth
 - **uncertain (0.5):** declined, hedged, or can't confirm

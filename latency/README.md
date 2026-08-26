@@ -2,6 +2,8 @@
 
 **What's faster: Brain API or bare LLM? We measured. Bare LLM wins on speed. Here's what that trade looks like.**
 
+> **Note on Brain API:** Brain API is a proprietary, closed system. Its latency numbers below come from a single internal run against a local instance and are **not independently verifiable**. Bare LLM numbers are reproducible with any OpenRouter key using the published script.
+
 ---
 
 ## What We Measured
@@ -52,11 +54,11 @@ Brain API cache hits come in at ~944ms. LLM fallback (cache miss → verificatio
 - 68% on the hallucination benchmark
 - 43% on the freshness benchmark (stale training data)
 
-Brain API scored 100% on hallucination and 78% on freshness.
+Brain API scored 100% on hallucination and 78% on freshness (internal runs — not independently verifiable; see the main README's conflict-of-interest note).
 
 For domains where wrong answers have consequences — medical dosing, tax limits, legal rules — 944ms is a reasonable cost. For speed-critical applications where answers don't require verification, bare LLM latency wins clearly.
 
-Cache hit rate matters. At 80–90% cache coverage on a warm cache, the effective median drops to ~944ms for most queries. At cold cache or novel queries, fallback to 2–7s applies.
+**Projected (not measured):** at an estimated 80–90% cache coverage on a warm cache, effective median would drop to ~944ms for most queries. This is an estimate, not a measured production figure. At cold cache or novel queries, fallback to 2–7s applies.
 
 ---
 
