@@ -2,6 +2,8 @@
 
 Published April 18, 2026. Comparative study of 5 AI systems across 90 fact-based cases.
 
+**Conflict of Interest:** The CertainLogic Brain API is developed by the authors of this benchmark. All Brain API results are from a proprietary system and cannot be independently reproduced without API access. All test cases, answers, scoring criteria, and raw data are included for independent verification of bare-LLM results.
+
 ---
 
 ## Study Context
@@ -69,7 +71,7 @@ This study evaluates four large language models and one proprietary AI system �
 
 The Brain API is ~17× slower (fast path) and ~43× slower (standard path) than a bare LLM. This reflects the additional verification processing it performs.
 
-### Cost (documented case study)
+### Cost (documented case study — single session, not independently verifiable)
 
 | Condition | Cost per 10-query session |
 |-----------|--------------------------|
@@ -77,7 +79,7 @@ The Brain API is ~17× slower (fast path) and ~43× slower (standard path) than 
 | With Guard layer | $0.246 |
 | Full Brain (warm cache) | ~$0.00 |
 
-Cache hit rate: 80–90% at steady state. These figures reflect a single documented session.
+Cache hit rate is not disclosed publicly. See caveat #6 for details.
 
 ---
 
@@ -92,6 +94,8 @@ Cache hit rate: 80–90% at steady state. These figures reflect a single documen
 4. **Epistemic scoring is interpretive.** Traditional scoring (correct=1, uncertain=0.5, wrong=0) and epistemic scoring (correct=1, uncertain=1, wrong=0) produce different rankings. Neither is "correct" — they reflect different values about safety vs informativeness.
 
 5. **Latency-cost tradeoff is real.** Brain API adds verification overhead. Whether 43x slower is worth it depends on whether incorrect answers carry downstream consequences.
+
+6. **Cache hit rate is NDA-only.** The 80-90% figure in the cost case study reflects a single internal session and is not independently verifiable. Cache performance varies by workload and is not a public claim.
 
 ---
 
@@ -128,9 +132,7 @@ run_benchmarks.py           — runs bare LLMs via OpenRouter
 run_brain_benchmark.py      — runs Brain API
 ```
 
-## Conflict of Interest
 
-The CertainLogic Brain API is developed by the authors. All test cases, answers, scoring criteria, and raw data are included for independent verification of bare-LLM results.
 
 ## License
 
