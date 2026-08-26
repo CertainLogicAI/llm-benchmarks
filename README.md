@@ -1,14 +1,14 @@
 # LLM Accuracy, Freshness, and Latency Benchmark
 
-Published April 18, 2026. Comparative study of 5 AI systems across 90 fact-based cases.
+Published April 18, 2026. Comparative study across 90 fact-based cases.
 
-**Conflict of Interest:** The CertainLogic Brain API is developed by the authors of this benchmark. All Brain API results are from a proprietary system and cannot be independently reproduced without API access. All test cases, answers, scoring criteria, and raw data are included for independent verification of bare-LLM results.
+> ⚠️ **Conflict of Interest:** CertainLogic Brain API is developed by the authors of this benchmark. All Brain API results are proprietary and reserved for NDA review. The public results below are limited to independently reproducible bare-LLM runs.
 
 ---
 
 ## Study Context
 
-This study evaluates four large language models and one proprietary AI system — GPT-4o, Claude Opus 4, Claude Sonnet 4.5, Llama 3.3 70B, and CertainLogic Brain API — across five dimensions:
+This study evaluates four large language models — GPT-4o, Claude Opus 4, Claude Sonnet 4.5, and Llama 3.3 70B — across five dimensions:
 
 | Benchmark | Cases | What It Measures |
 |-----------|-------|------------------|
@@ -18,16 +18,18 @@ This study evaluates four large language models and one proprietary AI system �
 | Latency | 10 queries × 3 runs | Response time under different conditions |
 | Cost | Documented case study | Token cost under three conditions |
 
-**Systems tested:**
+**Bare-LLM systems tested (independently reproducible):**
 - openai/gpt-4o (knowledge cutoff: October 2023)
 - anthropic/claude-opus-4 (knowledge cutoff: April 2024)
 - anthropic/claude-sonnet-4.5 (knowledge cutoff: April 2024)
 - meta-llama/llama-3.3-70b-instruct (knowledge cutoff: early 2023)
-- certainlogic/brain-api (proprietary system, April 2026 run)
+
+**Proprietary system also tested (NDA-only):**
+- certainlogic/brain-api (proprietary, April 2026 internal run)
 
 ---
 
-## Key Results
+## Key Results — Public (Bare LLMs)
 
 ### Hallucination (30 cases)
 
@@ -37,7 +39,6 @@ This study evaluates four large language models and one proprietary AI system �
 | GPT-4o | 74% |
 | Claude Sonnet 4.5 | 78% |
 | Claude Opus 4 | ~100% |
-| Brain API | 100% |
 
 ### Freshness (20 cases — annually changing facts)
 
@@ -45,11 +46,10 @@ This study evaluates four large language models and one proprietary AI system �
 |--------|-------|-----------|-------|
 | GPT-4o | 8.5/20 | 43% | Oct 2023 cutoff |
 | Llama 3.3 70B | 8.5/20 | 43% | Early 2023 cutoff |
-| **Brain API** | **15.5/20** | **78%** | 2 prior-year errors |
 | Claude Sonnet 4.5 | 17.5/20 | 88% | April 2024 cutoff |
 | Claude Opus 4 | 18/20 | 90% | April 2024 cutoff |
 
-**Important note:** All systems failed on the federal funds rate question — no model had a knowledge cutoff capturing late-2024 rate cuts. Brain API had "off-by-one-year" errors on Social Security wage base and gift tax exclusion.
+**Important note:** All systems failed on the federal funds rate question — no model had a knowledge cutoff capturing late-2024 rate cuts.
 
 ### Accuracy (20 cases)
 
@@ -57,7 +57,6 @@ This study evaluates four large language models and one proprietary AI system �
 |--------|-------|-----------|
 | Llama 3.3 70B | 17.5/20 | 88% |
 | GPT-4o | 18/20 | 90% |
-| **Brain API** | **18/20** | **90%** |
 | Claude Sonnet 4.5 | 19.5/20 | 98% |
 | Claude Opus 4 | 20/20 | 100% |
 
@@ -66,36 +65,22 @@ This study evaluates four large language models and one proprietary AI system �
 | Condition | Median Latency |
 |-----------|---------------|
 | Bare LLM (Llama 3.3 70B) | 55 ms |
-| Brain API — fast path | 944 ms |
-| Brain API — standard path | 2,382 ms |
+| GPT-4o | ~TBD |
+| Claude Sonnet 4.5 | ~TBD |
+| Claude Opus 4 | ~TBD |
 
-The Brain API is ~17× slower (fast path) and ~43× slower (standard path) than a bare LLM. This reflects the additional verification processing it performs.
-
-### Cost (documented case study — single session, not independently verifiable)
-
-| Condition | Cost per 10-query session |
-|-----------|--------------------------|
-| Bare LLM (Claude Opus 4) | $0.257 |
-| With Guard layer | $0.246 |
-| Full Brain (warm cache) | ~$0.00 |
-
-Cache hit rate is not disclosed publicly. See caveat #6 for details.
+Note: Comprehensive latency figures for other bare LLMs available via reproduction with your own API keys.
 
 ---
 
-## Important Caveats
+## NDA-Only Results
 
-1. **Brain API is proprietary.** Its results cannot be independently reproduced without API access. Architecture and verification methods are not published.
+CertainLogic Brain API was evaluated on the same benchmarks during an April 2026 internal run. Results (hallucination, freshness, accuracy, latency, cost) and methodology are proprietary — not independently verifiable without NDA. Contact anton@certainlogic.ai for NDA access.
 
-2. **Single-session study.** All results are from one execution on April 17, 2026. Not replicated across multiple dates or conditions.
-
-3. **Freshness is genuinely hard.** All systems had at least one failure on annually-changing figures. The "off-by-one-year" error (citing prior year's figure as current) appeared across multiple systems.
-
-4. **Epistemic scoring is interpretive.** Traditional scoring (correct=1, uncertain=0.5, wrong=0) and epistemic scoring (correct=1, uncertain=1, wrong=0) produce different rankings. Neither is "correct" — they reflect different values about safety vs informativeness.
-
-5. **Latency-cost tradeoff is real.** Brain API adds verification overhead. Whether 43x slower is worth it depends on whether incorrect answers carry downstream consequences.
-
-6. **Cache hit rate is NDA-only.** The 80-90% figure in the cost case study reflects a single internal session and is not independently verifiable. Cache performance varies by workload and is not a public claim.
+Key known caveats (apply to all systems):
+- All systems failed on federal funds rate question (post-2024 cutoffs)
+- Freshness "off-by-one-year" errors appear across multiple systems
+- This is a single-session study, not replicated
 
 ---
 
@@ -107,6 +92,8 @@ pip install -r requirements.txt
 export OPENROUTER_API_KEY=your_key
 python run_benchmarks.py
 ```
+
+All test cases, answers, scoring criteria, and raw data are included for independent verification of bare-LLM results.
 
 ### Against CertainLogic Brain API
 Get a free API key at https://certainlogic.ai
@@ -131,8 +118,6 @@ stress_test/
 run_benchmarks.py           — runs bare LLMs via OpenRouter
 run_brain_benchmark.py      — runs Brain API
 ```
-
-
 
 ## License
 
